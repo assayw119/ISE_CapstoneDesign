@@ -18,11 +18,18 @@
   <li>최종 보고서: 2022. 06. 19 (일)</li>
 </ul>
 
+<!-- <h3>결과</h3>
+  <ul>
+    <li>중간 발표: 3등</li>
+    <li>최종 발표: </li>
+  </ul> -->
+  
 <h3>프로젝트 로드맵</h3>
 <img src = '사진/로드맵.JPG'>
 
 <!-- <h3>중간발표 영상</h3>
 <a href = "https://youtu.be/zQKEXKmPrXs" target = '_blank'>보러가기</a>
+
 
 <h3>최종발표 영상</h3>
 <a href = " " target = "_blank">보러가기</a> -->
