@@ -4,7 +4,7 @@
 	         AnyLogic Project File 
 *************************************************	         
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.7.12.202205231125" AlpVersion="8.7.5">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.7.12.202205250339" AlpVersion="8.7.5">
 <Model>
 	<Id>1653807934364</Id>
 	<Name><![CDATA[new_0529]]></Name>
@@ -14230,7 +14230,7 @@ traceln("i'm going");]]></Code>
 					<X>0</X><Y>0</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<EmbeddedIcon>false</EmbeddedIcon>
@@ -14240,8 +14240,8 @@ traceln("i'm going");]]></Code>
 					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
 					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
 					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
-					<Latitude>37.477322360857855</Latitude>
-					<Longitude>127.07248119594566</Longitude>
+					<Latitude>37.48494771253478</Latitude>
+					<Longitude>127.07852121313718</Longitude>
 				</EmbeddedObjectPresentation>
 				<EmbeddedObjectPresentation>
 					<Id>1653995135861</Id>
@@ -14249,7 +14249,7 @@ traceln("i'm going");]]></Code>
 					<X>0</X><Y>0</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<EmbeddedIcon>false</EmbeddedIcon>
@@ -14259,8 +14259,8 @@ traceln("i'm going");]]></Code>
 					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
 					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
 					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
-					<Latitude>37.469260428676385</Latitude>
-					<Longitude>126.95881905425082</Longitude>
+					<Latitude>37.485383423411704</Latitude>
+					<Longitude>127.0705593722938</Longitude>
 				</EmbeddedObjectPresentation>
 			</Presentation>
 
@@ -17728,12 +17728,6 @@ traceln("Im leaving");]]></Action>
 		<LibraryName><![CDATA[com.anylogic.libraries.material_handling]]></LibraryName>
 		<VersionMajor>8</VersionMajor>
 		<VersionMinor>3</VersionMinor>
-		<VersionBuild>0</VersionBuild>
-    </RequiredLibraryReference>
-    <RequiredLibraryReference>
-		<LibraryName><![CDATA[opt_model]]></LibraryName>
-		<VersionMajor>0</VersionMajor>
-		<VersionMinor>0</VersionMinor>
 		<VersionBuild>0</VersionBuild>
     </RequiredLibraryReference>
 </Model>
