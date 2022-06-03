@@ -4,13 +4,13 @@
 	         AnyLogic Project File 
 *************************************************	         
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.7.12.202205250418" AlpVersion="8.7.5">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.7.12.202205250339" AlpVersion="8.7.5">
 <Model>
 	<Id>1653807934364</Id>
 	<Name><![CDATA[new_0529]]></Name>
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[new_0529]]></JavaPackageName>
-	<ModelTimeUnit><![CDATA[Second]]></ModelTimeUnit>
+	<ModelTimeUnit><![CDATA[Minute]]></ModelTimeUnit>
 	<ActiveObjectClasses>
 		<!--   =========   Active Object Class   ========  -->
 		<ActiveObjectClass>
@@ -84,11 +84,11 @@
 					<OccurrenceDate>1653811200000</OccurrenceDate>
 					<OccurrenceTime Class="CodeUnitValue">
 						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 					</OccurrenceTime>
 					<RecurrenceCode Class="CodeUnitValue">
 						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 					</RecurrenceCode>
 			</DatasetsCreationProperties>
 			<ScaleRuler>
@@ -110,6 +110,60 @@
 			<CurrentLevel>1653807934369</CurrentLevel>
 			<ConnectionsId>1653807934365</ConnectionsId>
 			<Variables>
+				<Variable Class="PlainVariable">
+					<Id>1654232837538</Id>
+					<Name><![CDATA[ReturnCost]]></Name>
+					<X>450</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[int]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1654233170202</Id>
+					<Name><![CDATA[TruckDistance]]></Name>
+					<X>600</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1654234854221</Id>
+					<Name><![CDATA[TruckNum]]></Name>
+					<X>900</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[int]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[5]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1654234854219</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
 				<Variable Class="CollectionVariable">
 					<Id>1653835623860</Id>
 					<Name><![CDATA[Gisp]]></Name>
@@ -151,7 +205,7 @@
 				<Connector>
 					<Id>1653992692236</Id>
 					<Name><![CDATA[connector1]]></Name>
-					<X>320</X><Y>730</Y>
+					<X>420</X><Y>1000</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -184,8 +238,7 @@
 				<Connector>
 					<Id>1653993886768</Id>
 					<Name><![CDATA[connector16]]></Name>
-					<ExcludeFromBuild>true</ExcludeFromBuild>
-					<X>720</X><Y>750</Y>
+					<X>390</X><Y>780</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -218,8 +271,7 @@
 				<Connector>
 					<Id>1653993886770</Id>
 					<Name><![CDATA[connector17]]></Name>
-					<ExcludeFromBuild>true</ExcludeFromBuild>
-					<X>950</X><Y>750</Y>
+					<X>620</X><Y>780</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -252,8 +304,7 @@
 				<Connector>
 					<Id>1653993886772</Id>
 					<Name><![CDATA[connector18]]></Name>
-					<ExcludeFromBuild>true</ExcludeFromBuild>
-					<X>470</X><Y>850</Y>
+					<X>140</X><Y>880</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -280,14 +331,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>180</X><Y>0</Y></Point>
+						<Point><X>190</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1653993886776</Id>
 					<Name><![CDATA[connector20]]></Name>
-					<ExcludeFromBuild>true</ExcludeFromBuild>
-					<X>690</X><Y>850</Y>
+					<X>370</X><Y>880</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -314,16 +364,15 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>40</X><Y>0</Y></Point>
-						<Point><X>40</X><Y>-80</Y></Point>
-						<Point><X>40</X><Y>-90</Y></Point>
+						<Point><X>30</X><Y>0</Y></Point>
+						<Point><X>30</X><Y>-80</Y></Point>
+						<Point><X>30</X><Y>-90</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1653993886778</Id>
 					<Name><![CDATA[connector21]]></Name>
-					<ExcludeFromBuild>true</ExcludeFromBuild>
-					<X>940</X><Y>760</Y>
+					<X>610</X><Y>790</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -357,8 +406,7 @@
 				<Connector>
 					<Id>1653993886780</Id>
 					<Name><![CDATA[connector22]]></Name>
-					<ExcludeFromBuild>true</ExcludeFromBuild>
-					<X>1140</X><Y>850</Y>
+					<X>810</X><Y>880</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -391,8 +439,7 @@
 				<Connector>
 					<Id>1653993886782</Id>
 					<Name><![CDATA[connector23]]></Name>
-					<ExcludeFromBuild>true</ExcludeFromBuild>
-					<X>370</X><Y>-40</Y>
+					<X>430</X><Y>780</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -418,15 +465,14 @@
 						<ItemName><![CDATA[in]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
-						<Point><X>390</X><Y>790</Y></Point>
-						<Point><X>430</X><Y>790</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>50</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1653993886784</Id>
 					<Name><![CDATA[connector24]]></Name>
-					<ExcludeFromBuild>true</ExcludeFromBuild>
-					<X>840</X><Y>750</Y>
+					<X>520</X><Y>780</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -453,15 +499,14 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>50</X><Y>0</Y></Point>
-						<Point><X>70</X><Y>0</Y></Point>
+						<Point><X>40</X><Y>0</Y></Point>
+						<Point><X>60</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1653993886786</Id>
 					<Name><![CDATA[connector25]]></Name>
-					<ExcludeFromBuild>true</ExcludeFromBuild>
-					<X>500</X><Y>750</Y>
+					<X>170</X><Y>780</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -494,7 +539,7 @@
 				<Connector>
 					<Id>1654060100384</Id>
 					<Name><![CDATA[connector]]></Name>
-					<X>190</X><Y>730</Y>
+					<X>290</X><Y>1000</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -521,13 +566,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-70</X><Y>0</Y></Point>
+						<Point><X>-130</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654060100408</Id>
 					<Name><![CDATA[connector19]]></Name>
-					<X>100</X><Y>730</Y>
+					<X>140</X><Y>1000</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -554,13 +599,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-50</X><Y>0</Y></Point>
+						<Point><X>-90</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654061153726</Id>
 					<Name><![CDATA[connector27]]></Name>
-					<X>230</X><Y>800</Y>
+					<X>330</X><Y>1070</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -594,7 +639,7 @@
 				<Connector>
 					<Id>1654061236862</Id>
 					<Name><![CDATA[connector28]]></Name>
-					<X>130</X><Y>800</Y>
+					<X>170</X><Y>1070</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -621,13 +666,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>60</X><Y>0</Y></Point>
+						<Point><X>120</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654061255597</Id>
 					<Name><![CDATA[connector29]]></Name>
-					<X>120</X><Y>810</Y>
+					<X>160</X><Y>1080</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -655,14 +700,14 @@
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>0</X><Y>50</Y></Point>
-						<Point><X>200</X><Y>50</Y></Point>
-						<Point><X>200</X><Y>-80</Y></Point>
+						<Point><X>260</X><Y>50</Y></Point>
+						<Point><X>260</X><Y>-80</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654061532675</Id>
 					<Name><![CDATA[connector30]]></Name>
-					<X>110</X><Y>740</Y>
+					<X>150</X><Y>1010</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -696,7 +741,7 @@
 				<Connector>
 					<Id>1654063575837</Id>
 					<Name><![CDATA[connector2]]></Name>
-					<X>350</X><Y>910</Y>
+					<X>430</X><Y>1220</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -729,7 +774,7 @@
 				<Connector>
 					<Id>1654063575839</Id>
 					<Name><![CDATA[connector3]]></Name>
-					<X>220</X><Y>910</Y>
+					<X>300</X><Y>1220</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -756,13 +801,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-70</X><Y>0</Y></Point>
+						<Point><X>-140</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654063575841</Id>
 					<Name><![CDATA[connector26]]></Name>
-					<X>130</X><Y>910</Y>
+					<X>140</X><Y>1220</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -780,7 +825,7 @@
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[new_0529]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[Naegok1]]></ItemName>
+						<ItemName><![CDATA[Banpo3]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
@@ -789,13 +834,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-50</X><Y>0</Y></Point>
+						<Point><X>-80</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654063575843</Id>
 					<Name><![CDATA[connector31]]></Name>
-					<X>260</X><Y>980</Y>
+					<X>340</X><Y>1290</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -829,7 +874,7 @@
 				<Connector>
 					<Id>1654063575845</Id>
 					<Name><![CDATA[connector32]]></Name>
-					<X>160</X><Y>980</Y>
+					<X>170</X><Y>1290</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -856,13 +901,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>60</X><Y>0</Y></Point>
+						<Point><X>130</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654063575847</Id>
 					<Name><![CDATA[connector33]]></Name>
-					<X>150</X><Y>990</Y>
+					<X>160</X><Y>1300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -890,14 +935,14 @@
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>0</X><Y>50</Y></Point>
-						<Point><X>200</X><Y>50</Y></Point>
-						<Point><X>200</X><Y>-80</Y></Point>
+						<Point><X>270</X><Y>50</Y></Point>
+						<Point><X>270</X><Y>-80</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654063575849</Id>
 					<Name><![CDATA[connector34]]></Name>
-					<X>140</X><Y>920</Y>
+					<X>150</X><Y>1230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -931,7 +976,7 @@
 				<Connector>
 					<Id>1654063622878</Id>
 					<Name><![CDATA[connector4]]></Name>
-					<X>310</X><Y>1070</Y>
+					<X>940</X><Y>1010</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -964,7 +1009,7 @@
 				<Connector>
 					<Id>1654063622880</Id>
 					<Name><![CDATA[connector5]]></Name>
-					<X>180</X><Y>1070</Y>
+					<X>810</X><Y>1010</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -991,13 +1036,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-70</X><Y>0</Y></Point>
+						<Point><X>-160</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654063622882</Id>
 					<Name><![CDATA[connector35]]></Name>
-					<X>90</X><Y>1070</Y>
+					<X>630</X><Y>1010</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1015,7 +1060,7 @@
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[new_0529]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[Naegok2]]></ItemName>
+						<ItemName><![CDATA[Banpo]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
@@ -1024,13 +1069,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-50</X><Y>0</Y></Point>
+						<Point><X>-80</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654063622884</Id>
 					<Name><![CDATA[connector36]]></Name>
-					<X>220</X><Y>1140</Y>
+					<X>850</X><Y>1080</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1064,7 +1109,7 @@
 				<Connector>
 					<Id>1654063622886</Id>
 					<Name><![CDATA[connector37]]></Name>
-					<X>120</X><Y>1140</Y>
+					<X>660</X><Y>1080</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1091,13 +1136,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>60</X><Y>0</Y></Point>
+						<Point><X>150</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654063622888</Id>
 					<Name><![CDATA[connector38]]></Name>
-					<X>110</X><Y>1150</Y>
+					<X>650</X><Y>1090</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1125,14 +1170,14 @@
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>0</X><Y>50</Y></Point>
-						<Point><X>200</X><Y>50</Y></Point>
-						<Point><X>200</X><Y>-80</Y></Point>
+						<Point><X>290</X><Y>50</Y></Point>
+						<Point><X>290</X><Y>-80</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654063622890</Id>
 					<Name><![CDATA[connector39]]></Name>
-					<X>100</X><Y>1080</Y>
+					<X>640</X><Y>1020</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1166,7 +1211,7 @@
 				<Connector>
 					<Id>1654063622892</Id>
 					<Name><![CDATA[connector6]]></Name>
-					<X>340</X><Y>1250</Y>
+					<X>950</X><Y>1230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1199,7 +1244,7 @@
 				<Connector>
 					<Id>1654063622894</Id>
 					<Name><![CDATA[connector7]]></Name>
-					<X>210</X><Y>1250</Y>
+					<X>820</X><Y>1230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1226,13 +1271,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-70</X><Y>0</Y></Point>
+						<Point><X>-160</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654063622896</Id>
 					<Name><![CDATA[connector40]]></Name>
-					<X>120</X><Y>1250</Y>
+					<X>640</X><Y>1230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1250,7 +1295,7 @@
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[new_0529]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[Naegok3]]></ItemName>
+						<ItemName><![CDATA[Bangbae]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
@@ -1259,13 +1304,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-50</X><Y>0</Y></Point>
+						<Point><X>-70</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654063622898</Id>
 					<Name><![CDATA[connector41]]></Name>
-					<X>250</X><Y>1320</Y>
+					<X>860</X><Y>1300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1299,7 +1344,7 @@
 				<Connector>
 					<Id>1654063622900</Id>
 					<Name><![CDATA[connector42]]></Name>
-					<X>150</X><Y>1320</Y>
+					<X>670</X><Y>1300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1326,13 +1371,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>60</X><Y>0</Y></Point>
+						<Point><X>150</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654063622902</Id>
 					<Name><![CDATA[connector43]]></Name>
-					<X>140</X><Y>1330</Y>
+					<X>660</X><Y>1310</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1360,14 +1405,14 @@
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>0</X><Y>50</Y></Point>
-						<Point><X>200</X><Y>50</Y></Point>
-						<Point><X>200</X><Y>-80</Y></Point>
+						<Point><X>290</X><Y>50</Y></Point>
+						<Point><X>290</X><Y>-80</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654063622904</Id>
 					<Name><![CDATA[connector44]]></Name>
-					<X>130</X><Y>1260</Y>
+					<X>650</X><Y>1240</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1401,7 +1446,7 @@
 				<Connector>
 					<Id>1654063638332</Id>
 					<Name><![CDATA[connector8]]></Name>
-					<X>330</X><Y>1420</Y>
+					<X>430</X><Y>1470</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1434,7 +1479,7 @@
 				<Connector>
 					<Id>1654063638334</Id>
 					<Name><![CDATA[connector9]]></Name>
-					<X>200</X><Y>1420</Y>
+					<X>300</X><Y>1470</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1461,13 +1506,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-70</X><Y>0</Y></Point>
+						<Point><X>-140</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654063638336</Id>
 					<Name><![CDATA[connector45]]></Name>
-					<X>110</X><Y>1420</Y>
+					<X>140</X><Y>1470</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1485,7 +1530,7 @@
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[new_0529]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[Naegok4]]></ItemName>
+						<ItemName><![CDATA[Seocho]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
@@ -1494,13 +1539,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-50</X><Y>0</Y></Point>
+						<Point><X>-70</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654063638338</Id>
 					<Name><![CDATA[connector46]]></Name>
-					<X>240</X><Y>1490</Y>
+					<X>340</X><Y>1540</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1534,7 +1579,7 @@
 				<Connector>
 					<Id>1654063638340</Id>
 					<Name><![CDATA[connector47]]></Name>
-					<X>140</X><Y>1490</Y>
+					<X>170</X><Y>1540</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1561,13 +1606,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>60</X><Y>0</Y></Point>
+						<Point><X>130</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654063638342</Id>
 					<Name><![CDATA[connector48]]></Name>
-					<X>130</X><Y>1500</Y>
+					<X>160</X><Y>1550</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1595,14 +1640,14 @@
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>0</X><Y>50</Y></Point>
-						<Point><X>200</X><Y>50</Y></Point>
-						<Point><X>200</X><Y>-80</Y></Point>
+						<Point><X>270</X><Y>50</Y></Point>
+						<Point><X>270</X><Y>-80</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654063638344</Id>
 					<Name><![CDATA[connector49]]></Name>
-					<X>120</X><Y>1430</Y>
+					<X>150</X><Y>1480</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1636,7 +1681,7 @@
 				<Connector>
 					<Id>1654063638346</Id>
 					<Name><![CDATA[connector10]]></Name>
-					<X>360</X><Y>1600</Y>
+					<X>470</X><Y>1740</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1669,7 +1714,7 @@
 				<Connector>
 					<Id>1654063638348</Id>
 					<Name><![CDATA[connector11]]></Name>
-					<X>230</X><Y>1600</Y>
+					<X>340</X><Y>1740</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1696,13 +1741,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-70</X><Y>0</Y></Point>
+						<Point><X>-140</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654063638350</Id>
 					<Name><![CDATA[connector50]]></Name>
-					<X>140</X><Y>1600</Y>
+					<X>180</X><Y>1740</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1720,7 +1765,7 @@
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[new_0529]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[Naegok5]]></ItemName>
+						<ItemName><![CDATA[Yangjae1]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
@@ -1729,13 +1774,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-50</X><Y>0</Y></Point>
+						<Point><X>-90</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654063638352</Id>
 					<Name><![CDATA[connector51]]></Name>
-					<X>270</X><Y>1670</Y>
+					<X>380</X><Y>1810</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1769,7 +1814,7 @@
 				<Connector>
 					<Id>1654063638354</Id>
 					<Name><![CDATA[connector52]]></Name>
-					<X>170</X><Y>1670</Y>
+					<X>210</X><Y>1810</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1796,13 +1841,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>60</X><Y>0</Y></Point>
+						<Point><X>130</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654063638356</Id>
 					<Name><![CDATA[connector53]]></Name>
-					<X>160</X><Y>1680</Y>
+					<X>200</X><Y>1820</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1830,14 +1875,14 @@
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>0</X><Y>50</Y></Point>
-						<Point><X>200</X><Y>50</Y></Point>
-						<Point><X>200</X><Y>-80</Y></Point>
+						<Point><X>270</X><Y>50</Y></Point>
+						<Point><X>270</X><Y>-80</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654063638358</Id>
 					<Name><![CDATA[connector54]]></Name>
-					<X>150</X><Y>1610</Y>
+					<X>190</X><Y>1750</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1871,7 +1916,7 @@
 				<Connector>
 					<Id>1654063638360</Id>
 					<Name><![CDATA[connector12]]></Name>
-					<X>320</X><Y>1760</Y>
+					<X>960</X><Y>1470</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1904,7 +1949,7 @@
 				<Connector>
 					<Id>1654063638362</Id>
 					<Name><![CDATA[connector13]]></Name>
-					<X>190</X><Y>1760</Y>
+					<X>830</X><Y>1470</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1931,13 +1976,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-70</X><Y>0</Y></Point>
+						<Point><X>-160</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654063638364</Id>
 					<Name><![CDATA[connector55]]></Name>
-					<X>100</X><Y>1760</Y>
+					<X>650</X><Y>1470</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1955,7 +2000,7 @@
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[new_0529]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[Naegok6]]></ItemName>
+						<ItemName><![CDATA[Yangjae2]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
@@ -1964,13 +2009,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-50</X><Y>0</Y></Point>
+						<Point><X>-80</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654063638366</Id>
 					<Name><![CDATA[connector56]]></Name>
-					<X>230</X><Y>1830</Y>
+					<X>870</X><Y>1540</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2004,7 +2049,7 @@
 				<Connector>
 					<Id>1654063638368</Id>
 					<Name><![CDATA[connector57]]></Name>
-					<X>130</X><Y>1830</Y>
+					<X>680</X><Y>1540</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2031,13 +2076,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>60</X><Y>0</Y></Point>
+						<Point><X>150</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654063638370</Id>
 					<Name><![CDATA[connector58]]></Name>
-					<X>120</X><Y>1840</Y>
+					<X>670</X><Y>1550</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2065,14 +2110,14 @@
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>0</X><Y>50</Y></Point>
-						<Point><X>200</X><Y>50</Y></Point>
-						<Point><X>200</X><Y>-80</Y></Point>
+						<Point><X>290</X><Y>50</Y></Point>
+						<Point><X>290</X><Y>-80</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654063638372</Id>
 					<Name><![CDATA[connector59]]></Name>
-					<X>110</X><Y>1770</Y>
+					<X>660</X><Y>1480</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2106,7 +2151,7 @@
 				<Connector>
 					<Id>1654063638374</Id>
 					<Name><![CDATA[connector14]]></Name>
-					<X>350</X><Y>1940</Y>
+					<X>960</X><Y>1740</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2139,7 +2184,7 @@
 				<Connector>
 					<Id>1654063638376</Id>
 					<Name><![CDATA[connector15]]></Name>
-					<X>220</X><Y>1940</Y>
+					<X>830</X><Y>1740</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2166,13 +2211,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-70</X><Y>0</Y></Point>
+						<Point><X>-130</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654063638378</Id>
 					<Name><![CDATA[connector60]]></Name>
-					<X>130</X><Y>1940</Y>
+					<X>680</X><Y>1740</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2190,7 +2235,7 @@
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[new_0529]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[Naegok7]]></ItemName>
+						<ItemName><![CDATA[Jamwon]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
@@ -2199,13 +2244,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-50</X><Y>0</Y></Point>
+						<Point><X>-90</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654063638380</Id>
 					<Name><![CDATA[connector61]]></Name>
-					<X>260</X><Y>2010</Y>
+					<X>870</X><Y>1810</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2239,7 +2284,7 @@
 				<Connector>
 					<Id>1654063638382</Id>
 					<Name><![CDATA[connector62]]></Name>
-					<X>160</X><Y>2010</Y>
+					<X>710</X><Y>1810</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2266,13 +2311,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>60</X><Y>0</Y></Point>
+						<Point><X>120</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654063638384</Id>
 					<Name><![CDATA[connector63]]></Name>
-					<X>150</X><Y>2020</Y>
+					<X>700</X><Y>1820</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2300,14 +2345,14 @@
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>0</X><Y>50</Y></Point>
-						<Point><X>200</X><Y>50</Y></Point>
-						<Point><X>200</X><Y>-80</Y></Point>
+						<Point><X>260</X><Y>50</Y></Point>
+						<Point><X>260</X><Y>-80</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1654063638386</Id>
 					<Name><![CDATA[connector64]]></Name>
-					<X>140</X><Y>1950</Y>
+					<X>690</X><Y>1750</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2339,6 +2384,45 @@
 					</Points>
 				</Connector>
 			</Connectors>
+			<Functions>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1654241390076</Id>
+					<Name><![CDATA[getdist]]></Name>
+					<X>600</X><Y>-150</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[TruckDistance += Truck.getDistanceGIS(37.4726512,126.838255, callTruck.Caller.getLatitude(), callTruck.Caller.getLongitude());]]></Body>
+				</Function>
+			</Functions>
+			<AnalysisData>
+    			<DataSet>
+					<Id>1654233276505</Id>
+					<Name><![CDATA[Profit]]></Name>
+					<X>800</X><Y>-100</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1654243200000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<FreezeXAxis>true</FreezeXAxis>
+					<VerticalAxisExpression><![CDATA[ReturnCost]]></VerticalAxisExpression>
+					<SamplesToKeep>100</SamplesToKeep>
+				</DataSet>
+			</AnalysisData>
 			<AgentLinks>
 				<AgentLink>
 					<Id>1653807934365</Id>
@@ -2449,6 +2533,9 @@
 						</GenericParameterSubstituteReference>
 					</GenericParameterSubstitute>
 					<Parameters>
+						<Parameter>
+							<Name><![CDATA[client]]></Name>
+						</Parameter>
 					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
 					<Replication Class="CodeValue">
@@ -2457,7 +2544,7 @@
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
 					<InEnvironment>true</InEnvironment>	
 					<InitialSpeedCode Class="CodeUnitValue">
-						<Code><![CDATA[60]]></Code>
+						<Code><![CDATA[120]]></Code>
 						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
 					</InitialSpeedCode>
 					<InitialLocationType>NODE</InitialLocationType>
@@ -2498,7 +2585,7 @@
 				<EmbeddedObject>
 					<Id>1653836215990</Id>
 					<Name><![CDATA[Naegok]]></Name>
-					<X>20</X><Y>720</Y>
+					<X>20</X><Y>990</Y>
 					<Label><X>-15</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2521,7 +2608,7 @@
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[1]]></Code>
+								<Code><![CDATA[0.1]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
 							</Value>
 						</Parameter>
@@ -2563,6 +2650,9 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[uniform_discr(10, 5)]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[limitArrivals]]></Name>
@@ -2715,6 +2805,10 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[ReturnCost -= 1000;
+Profit.add(ReturnCost);]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onDiscard]]></Name>
@@ -2762,7 +2856,7 @@
 				<EmbeddedObject>
 					<Id>1653992688182</Id>
 					<Name><![CDATA[toNearReturn]]></Name>
-					<X>190</X><Y>710</Y>
+					<X>290</X><Y>980</Y>
 					<Label><X>-20</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2876,7 +2970,9 @@
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[agent.getNearestAgent(Machines).MachineCup++;
-traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
+traceln(agent.getNearestAgent(Machines).MachineCup);
+ReturnCost += 1100;
+Profit.add(ReturnCost);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -2925,7 +3021,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992690945</Id>
 					<Name><![CDATA[sink]]></Name>
-					<X>320</X><Y>720</Y>
+					<X>420</X><Y>990</Y>
 					<Label><X>-15</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2991,10 +3087,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791247</Id>
 					<Name><![CDATA[gisPoint75]]></Name>
-					<X>-100</X><Y>20</Y>
+					<X>-250</X><Y>20</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791323</PresentationId>
 					<ActiveObjectClass>
@@ -3057,10 +3153,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791248</Id>
 					<Name><![CDATA[gisPoint76]]></Name>
-					<X>-100</X><Y>40</Y>
+					<X>-250</X><Y>40</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791324</PresentationId>
 					<ActiveObjectClass>
@@ -3122,10 +3218,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791249</Id>
 					<Name><![CDATA[gisPoint77]]></Name>
-					<X>-100</X><Y>60</Y>
+					<X>-250</X><Y>60</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791325</PresentationId>
 					<ActiveObjectClass>
@@ -3187,10 +3283,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791250</Id>
 					<Name><![CDATA[gisPoint78]]></Name>
-					<X>-100</X><Y>80</Y>
+					<X>-250</X><Y>80</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791326</PresentationId>
 					<ActiveObjectClass>
@@ -3252,10 +3348,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791251</Id>
 					<Name><![CDATA[gisPoint79]]></Name>
-					<X>-100</X><Y>100</Y>
+					<X>-250</X><Y>100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791327</PresentationId>
 					<ActiveObjectClass>
@@ -3317,10 +3413,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791252</Id>
 					<Name><![CDATA[gisPoint80]]></Name>
-					<X>-100</X><Y>120</Y>
+					<X>-250</X><Y>120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791328</PresentationId>
 					<ActiveObjectClass>
@@ -3382,10 +3478,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791253</Id>
 					<Name><![CDATA[gisPoint81]]></Name>
-					<X>-100</X><Y>140</Y>
+					<X>-250</X><Y>140</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791329</PresentationId>
 					<ActiveObjectClass>
@@ -3447,10 +3543,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791254</Id>
 					<Name><![CDATA[gisPoint82]]></Name>
-					<X>-100</X><Y>160</Y>
+					<X>-250</X><Y>160</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791330</PresentationId>
 					<ActiveObjectClass>
@@ -3512,10 +3608,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791255</Id>
 					<Name><![CDATA[gisPoint83]]></Name>
-					<X>-100</X><Y>180</Y>
+					<X>-250</X><Y>180</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791331</PresentationId>
 					<ActiveObjectClass>
@@ -3577,10 +3673,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791256</Id>
 					<Name><![CDATA[gisPoint84]]></Name>
-					<X>-100</X><Y>200</Y>
+					<X>-250</X><Y>200</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791336</PresentationId>
 					<ActiveObjectClass>
@@ -3642,10 +3738,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791257</Id>
 					<Name><![CDATA[gisPoint85]]></Name>
-					<X>-100</X><Y>220</Y>
+					<X>-250</X><Y>220</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791344</PresentationId>
 					<ActiveObjectClass>
@@ -3707,10 +3803,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791258</Id>
 					<Name><![CDATA[gisPoint86]]></Name>
-					<X>-100</X><Y>240</Y>
+					<X>-250</X><Y>240</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791350</PresentationId>
 					<ActiveObjectClass>
@@ -3772,10 +3868,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791259</Id>
 					<Name><![CDATA[gisPoint87]]></Name>
-					<X>-100</X><Y>260</Y>
+					<X>-250</X><Y>260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791358</PresentationId>
 					<ActiveObjectClass>
@@ -3837,10 +3933,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791260</Id>
 					<Name><![CDATA[gisPoint88]]></Name>
-					<X>-100</X><Y>280</Y>
+					<X>-250</X><Y>280</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791381</PresentationId>
 					<ActiveObjectClass>
@@ -3902,10 +3998,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791261</Id>
 					<Name><![CDATA[gisPoint89]]></Name>
-					<X>-100</X><Y>300</Y>
+					<X>-250</X><Y>300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791389</PresentationId>
 					<ActiveObjectClass>
@@ -3967,10 +4063,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791262</Id>
 					<Name><![CDATA[gisPoint90]]></Name>
-					<X>-100</X><Y>320</Y>
+					<X>-250</X><Y>320</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791396</PresentationId>
 					<ActiveObjectClass>
@@ -4032,10 +4128,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791263</Id>
 					<Name><![CDATA[gisPoint91]]></Name>
-					<X>-100</X><Y>340</Y>
+					<X>-250</X><Y>340</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791405</PresentationId>
 					<ActiveObjectClass>
@@ -4097,10 +4193,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791264</Id>
 					<Name><![CDATA[gisPoint92]]></Name>
-					<X>-100</X><Y>360</Y>
+					<X>-250</X><Y>360</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791412</PresentationId>
 					<ActiveObjectClass>
@@ -4162,10 +4258,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791265</Id>
 					<Name><![CDATA[gisPoint93]]></Name>
-					<X>-100</X><Y>380</Y>
+					<X>-250</X><Y>380</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791420</PresentationId>
 					<ActiveObjectClass>
@@ -4227,10 +4323,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791266</Id>
 					<Name><![CDATA[gisPoint94]]></Name>
-					<X>-100</X><Y>400</Y>
+					<X>-250</X><Y>400</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791427</PresentationId>
 					<ActiveObjectClass>
@@ -4292,10 +4388,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791267</Id>
 					<Name><![CDATA[gisPoint95]]></Name>
-					<X>-100</X><Y>420</Y>
+					<X>-250</X><Y>420</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791434</PresentationId>
 					<ActiveObjectClass>
@@ -4357,10 +4453,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791268</Id>
 					<Name><![CDATA[gisPoint96]]></Name>
-					<X>-100</X><Y>440</Y>
+					<X>-250</X><Y>440</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791442</PresentationId>
 					<ActiveObjectClass>
@@ -4422,10 +4518,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791269</Id>
 					<Name><![CDATA[gisPoint97]]></Name>
-					<X>-100</X><Y>460</Y>
+					<X>-250</X><Y>460</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791450</PresentationId>
 					<ActiveObjectClass>
@@ -4487,10 +4583,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791270</Id>
 					<Name><![CDATA[gisPoint98]]></Name>
-					<X>-100</X><Y>480</Y>
+					<X>-250</X><Y>480</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791458</PresentationId>
 					<ActiveObjectClass>
@@ -4552,10 +4648,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791271</Id>
 					<Name><![CDATA[gisPoint99]]></Name>
-					<X>-100</X><Y>500</Y>
+					<X>-250</X><Y>500</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791465</PresentationId>
 					<ActiveObjectClass>
@@ -4617,10 +4713,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791272</Id>
 					<Name><![CDATA[gisPoint100]]></Name>
-					<X>-100</X><Y>520</Y>
+					<X>-250</X><Y>520</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791472</PresentationId>
 					<ActiveObjectClass>
@@ -4682,10 +4778,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791273</Id>
 					<Name><![CDATA[gisPoint101]]></Name>
-					<X>-100</X><Y>540</Y>
+					<X>-250</X><Y>540</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791480</PresentationId>
 					<ActiveObjectClass>
@@ -4747,10 +4843,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791274</Id>
 					<Name><![CDATA[gisPoint102]]></Name>
-					<X>-100</X><Y>560</Y>
+					<X>-250</X><Y>560</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791488</PresentationId>
 					<ActiveObjectClass>
@@ -4812,10 +4908,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791275</Id>
 					<Name><![CDATA[gisPoint103]]></Name>
-					<X>-100</X><Y>580</Y>
+					<X>-250</X><Y>580</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791495</PresentationId>
 					<ActiveObjectClass>
@@ -4877,10 +4973,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791276</Id>
 					<Name><![CDATA[gisPoint104]]></Name>
-					<X>-100</X><Y>600</Y>
+					<X>-250</X><Y>600</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791502</PresentationId>
 					<ActiveObjectClass>
@@ -4942,10 +5038,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791277</Id>
 					<Name><![CDATA[gisPoint105]]></Name>
-					<X>-100</X><Y>620</Y>
+					<X>-250</X><Y>620</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791509</PresentationId>
 					<ActiveObjectClass>
@@ -5007,10 +5103,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791278</Id>
 					<Name><![CDATA[gisPoint106]]></Name>
-					<X>-100</X><Y>640</Y>
+					<X>-250</X><Y>640</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791517</PresentationId>
 					<ActiveObjectClass>
@@ -5072,10 +5168,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791279</Id>
 					<Name><![CDATA[gisPoint107]]></Name>
-					<X>-100</X><Y>660</Y>
+					<X>-250</X><Y>660</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791523</PresentationId>
 					<ActiveObjectClass>
@@ -5137,10 +5233,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791280</Id>
 					<Name><![CDATA[gisPoint108]]></Name>
-					<X>-100</X><Y>680</Y>
+					<X>-250</X><Y>680</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791530</PresentationId>
 					<ActiveObjectClass>
@@ -5202,10 +5298,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791281</Id>
 					<Name><![CDATA[gisPoint109]]></Name>
-					<X>-100</X><Y>700</Y>
+					<X>-250</X><Y>700</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791537</PresentationId>
 					<ActiveObjectClass>
@@ -5267,10 +5363,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791282</Id>
 					<Name><![CDATA[gisPoint110]]></Name>
-					<X>-100</X><Y>720</Y>
+					<X>-250</X><Y>720</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791544</PresentationId>
 					<ActiveObjectClass>
@@ -5332,10 +5428,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791283</Id>
 					<Name><![CDATA[gisPoint111]]></Name>
-					<X>-100</X><Y>740</Y>
+					<X>-250</X><Y>740</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791551</PresentationId>
 					<ActiveObjectClass>
@@ -5397,10 +5493,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791284</Id>
 					<Name><![CDATA[gisPoint112]]></Name>
-					<X>-100</X><Y>760</Y>
+					<X>-250</X><Y>760</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791559</PresentationId>
 					<ActiveObjectClass>
@@ -5462,10 +5558,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791285</Id>
 					<Name><![CDATA[gisPoint113]]></Name>
-					<X>-100</X><Y>780</Y>
+					<X>-250</X><Y>780</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791566</PresentationId>
 					<ActiveObjectClass>
@@ -5527,10 +5623,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791286</Id>
 					<Name><![CDATA[gisPoint114]]></Name>
-					<X>-100</X><Y>800</Y>
+					<X>-250</X><Y>800</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791572</PresentationId>
 					<ActiveObjectClass>
@@ -5592,10 +5688,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791287</Id>
 					<Name><![CDATA[gisPoint115]]></Name>
-					<X>-100</X><Y>820</Y>
+					<X>-250</X><Y>820</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791582</PresentationId>
 					<ActiveObjectClass>
@@ -5657,10 +5753,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791288</Id>
 					<Name><![CDATA[gisPoint116]]></Name>
-					<X>-100</X><Y>840</Y>
+					<X>-250</X><Y>840</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791590</PresentationId>
 					<ActiveObjectClass>
@@ -5722,10 +5818,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791289</Id>
 					<Name><![CDATA[gisPoint117]]></Name>
-					<X>-100</X><Y>860</Y>
+					<X>-250</X><Y>860</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791597</PresentationId>
 					<ActiveObjectClass>
@@ -5787,10 +5883,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791290</Id>
 					<Name><![CDATA[gisPoint118]]></Name>
-					<X>-100</X><Y>880</Y>
+					<X>-250</X><Y>880</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791604</PresentationId>
 					<ActiveObjectClass>
@@ -5852,10 +5948,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791291</Id>
 					<Name><![CDATA[gisPoint119]]></Name>
-					<X>-100</X><Y>900</Y>
+					<X>-250</X><Y>900</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791611</PresentationId>
 					<ActiveObjectClass>
@@ -5917,10 +6013,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791292</Id>
 					<Name><![CDATA[gisPoint120]]></Name>
-					<X>-100</X><Y>920</Y>
+					<X>-250</X><Y>920</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791618</PresentationId>
 					<ActiveObjectClass>
@@ -5982,10 +6078,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791293</Id>
 					<Name><![CDATA[gisPoint121]]></Name>
-					<X>-100</X><Y>940</Y>
+					<X>-250</X><Y>940</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791625</PresentationId>
 					<ActiveObjectClass>
@@ -6047,10 +6143,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791294</Id>
 					<Name><![CDATA[gisPoint122]]></Name>
-					<X>-100</X><Y>960</Y>
+					<X>-250</X><Y>960</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791632</PresentationId>
 					<ActiveObjectClass>
@@ -6112,10 +6208,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791295</Id>
 					<Name><![CDATA[gisPoint123]]></Name>
-					<X>-100</X><Y>980</Y>
+					<X>-250</X><Y>980</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791639</PresentationId>
 					<ActiveObjectClass>
@@ -6177,10 +6273,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791296</Id>
 					<Name><![CDATA[gisPoint124]]></Name>
-					<X>-100</X><Y>1000</Y>
+					<X>-250</X><Y>1000</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791646</PresentationId>
 					<ActiveObjectClass>
@@ -6242,10 +6338,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791297</Id>
 					<Name><![CDATA[gisPoint125]]></Name>
-					<X>-100</X><Y>1020</Y>
+					<X>-250</X><Y>1020</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791653</PresentationId>
 					<ActiveObjectClass>
@@ -6307,10 +6403,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791298</Id>
 					<Name><![CDATA[gisPoint126]]></Name>
-					<X>-100</X><Y>1040</Y>
+					<X>-250</X><Y>1040</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791660</PresentationId>
 					<ActiveObjectClass>
@@ -6372,10 +6468,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791299</Id>
 					<Name><![CDATA[gisPoint127]]></Name>
-					<X>-100</X><Y>1060</Y>
+					<X>-250</X><Y>1060</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791668</PresentationId>
 					<ActiveObjectClass>
@@ -6437,10 +6533,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791300</Id>
 					<Name><![CDATA[gisPoint128]]></Name>
-					<X>-100</X><Y>1080</Y>
+					<X>-250</X><Y>1080</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791675</PresentationId>
 					<ActiveObjectClass>
@@ -6502,10 +6598,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791301</Id>
 					<Name><![CDATA[gisPoint129]]></Name>
-					<X>-100</X><Y>1100</Y>
+					<X>-250</X><Y>1100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791683</PresentationId>
 					<ActiveObjectClass>
@@ -6567,10 +6663,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791302</Id>
 					<Name><![CDATA[gisPoint130]]></Name>
-					<X>-100</X><Y>1120</Y>
+					<X>-250</X><Y>1120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791690</PresentationId>
 					<ActiveObjectClass>
@@ -6632,10 +6728,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791303</Id>
 					<Name><![CDATA[gisPoint131]]></Name>
-					<X>-100</X><Y>1140</Y>
+					<X>-250</X><Y>1140</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791698</PresentationId>
 					<ActiveObjectClass>
@@ -6697,10 +6793,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791304</Id>
 					<Name><![CDATA[gisPoint132]]></Name>
-					<X>-100</X><Y>1160</Y>
+					<X>-250</X><Y>1160</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791705</PresentationId>
 					<ActiveObjectClass>
@@ -6762,10 +6858,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791305</Id>
 					<Name><![CDATA[gisPoint133]]></Name>
-					<X>-100</X><Y>1180</Y>
+					<X>-250</X><Y>1180</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791712</PresentationId>
 					<ActiveObjectClass>
@@ -6827,10 +6923,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791306</Id>
 					<Name><![CDATA[gisPoint134]]></Name>
-					<X>-100</X><Y>1200</Y>
+					<X>-250</X><Y>1200</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791719</PresentationId>
 					<ActiveObjectClass>
@@ -6892,10 +6988,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791307</Id>
 					<Name><![CDATA[gisPoint135]]></Name>
-					<X>-100</X><Y>1220</Y>
+					<X>-250</X><Y>1220</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791727</PresentationId>
 					<ActiveObjectClass>
@@ -6957,10 +7053,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791308</Id>
 					<Name><![CDATA[gisPoint136]]></Name>
-					<X>-100</X><Y>1240</Y>
+					<X>-250</X><Y>1240</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791734</PresentationId>
 					<ActiveObjectClass>
@@ -7022,10 +7118,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791309</Id>
 					<Name><![CDATA[gisPoint137]]></Name>
-					<X>-100</X><Y>1260</Y>
+					<X>-250</X><Y>1260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791741</PresentationId>
 					<ActiveObjectClass>
@@ -7087,10 +7183,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791310</Id>
 					<Name><![CDATA[gisPoint138]]></Name>
-					<X>-100</X><Y>1280</Y>
+					<X>-250</X><Y>1280</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791749</PresentationId>
 					<ActiveObjectClass>
@@ -7152,10 +7248,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791311</Id>
 					<Name><![CDATA[gisPoint139]]></Name>
-					<X>-100</X><Y>1300</Y>
+					<X>-250</X><Y>1300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791756</PresentationId>
 					<ActiveObjectClass>
@@ -7217,10 +7313,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791312</Id>
 					<Name><![CDATA[gisPoint140]]></Name>
-					<X>-100</X><Y>1320</Y>
+					<X>-250</X><Y>1320</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791765</PresentationId>
 					<ActiveObjectClass>
@@ -7282,10 +7378,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791313</Id>
 					<Name><![CDATA[gisPoint141]]></Name>
-					<X>-100</X><Y>1340</Y>
+					<X>-250</X><Y>1340</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791775</PresentationId>
 					<ActiveObjectClass>
@@ -7347,10 +7443,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791314</Id>
 					<Name><![CDATA[gisPoint142]]></Name>
-					<X>-100</X><Y>1360</Y>
+					<X>-250</X><Y>1360</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791782</PresentationId>
 					<ActiveObjectClass>
@@ -7412,10 +7508,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791315</Id>
 					<Name><![CDATA[gisPoint143]]></Name>
-					<X>-100</X><Y>1380</Y>
+					<X>-250</X><Y>1380</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791790</PresentationId>
 					<ActiveObjectClass>
@@ -7477,10 +7573,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791316</Id>
 					<Name><![CDATA[gisPoint144]]></Name>
-					<X>-100</X><Y>1400</Y>
+					<X>-250</X><Y>1400</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791796</PresentationId>
 					<ActiveObjectClass>
@@ -7542,10 +7638,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791317</Id>
 					<Name><![CDATA[gisPoint145]]></Name>
-					<X>-100</X><Y>1420</Y>
+					<X>-250</X><Y>1420</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791803</PresentationId>
 					<ActiveObjectClass>
@@ -7607,10 +7703,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791318</Id>
 					<Name><![CDATA[gisPoint146]]></Name>
-					<X>-100</X><Y>1440</Y>
+					<X>-250</X><Y>1440</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791811</PresentationId>
 					<ActiveObjectClass>
@@ -7672,10 +7768,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791319</Id>
 					<Name><![CDATA[gisPoint147]]></Name>
-					<X>-100</X><Y>1460</Y>
+					<X>-250</X><Y>1460</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791817</PresentationId>
 					<ActiveObjectClass>
@@ -7737,10 +7833,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791320</Id>
 					<Name><![CDATA[gisPoint148]]></Name>
-					<X>-100</X><Y>1480</Y>
+					<X>-250</X><Y>1480</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791825</PresentationId>
 					<ActiveObjectClass>
@@ -7802,10 +7898,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992791321</Id>
 					<Name><![CDATA[gisPoint149]]></Name>
-					<X>-100</X><Y>1500</Y>
+					<X>-250</X><Y>1500</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1653992791831</PresentationId>
 					<ActiveObjectClass>
@@ -7936,8 +8032,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653993886637</Id>
 					<Name><![CDATA[queue]]></Name>
-					<ExcludeFromBuild>true</ExcludeFromBuild>
-					<X>600</X><Y>730</Y>
+					<X>270</X><Y>760</Y>
 					<Label><X>-10</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8048,8 +8143,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653993886648</Id>
 					<Name><![CDATA[sink8]]></Name>
-					<ExcludeFromBuild>true</ExcludeFromBuild>
-					<X>1130</X><Y>740</Y>
+					<X>800</X><Y>770</Y>
 					<Label><X>-5</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8121,8 +8215,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653993886655</Id>
 					<Name><![CDATA[seize]]></Name>
-					<ExcludeFromBuild>true</ExcludeFromBuild>
-					<X>720</X><Y>730</Y>
+					<X>390</X><Y>760</Y>
 					<Label><X>-5</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8340,8 +8433,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653993886663</Id>
 					<Name><![CDATA[release]]></Name>
-					<ExcludeFromBuild>true</ExcludeFromBuild>
-					<X>910</X><Y>730</Y>
+					<X>580</X><Y>760</Y>
 					<Label><X>-10</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8446,8 +8538,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653993886673</Id>
 					<Name><![CDATA[truck]]></Name>
-					<ExcludeFromBuild>true</ExcludeFromBuild>
-					<X>600</X><Y>670</Y>
+					<X>20</X><Y>760</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8517,6 +8608,9 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 										</GenericParameterSubstituteReference>
 									</GenericParameterSubstitute>
 									<Parameters>
+										<Parameter>
+											<Name><![CDATA[client]]></Name>
+										</Parameter>
 									</Parameters>
 									<ReplicationFlag>true</ReplicationFlag>
 									<Replication Class="CodeValue">
@@ -8561,6 +8655,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[speed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[120]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[homeLocationType]]></Name>
@@ -8678,9 +8776,15 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[addToCustomPopulation]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[population]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[trucks]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[forceStatisticsCollection]]></Name>
@@ -8767,8 +8871,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653993886692</Id>
 					<Name><![CDATA[resourceTaskStart]]></Name>
-					<ExcludeFromBuild>true</ExcludeFromBuild>
-					<X>450</X><Y>840</Y>
+					<X>120</X><Y>870</Y>
 					<Label><X>-55</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8843,8 +8946,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653993886711</Id>
 					<Name><![CDATA[to]]></Name>
-					<ExcludeFromBuild>true</ExcludeFromBuild>
-					<X>650</X><Y>830</Y>
+					<X>330</X><Y>860</Y>
 					<Label><X>-15</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9012,8 +9114,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653993886723</Id>
 					<Name><![CDATA[moveTo9]]></Name>
-					<ExcludeFromBuild>true</ExcludeFromBuild>
-					<X>990</X><Y>830</Y>
+					<X>660</X><Y>860</Y>
 					<Label><X>-15</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9181,8 +9282,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653993886736</Id>
 					<Name><![CDATA[resourceTaskEnd]]></Name>
-					<ExcludeFromBuild>true</ExcludeFromBuild>
-					<X>1140</X><Y>840</Y>
+					<X>810</X><Y>870</Y>
 					<Label><X>-65</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9207,6 +9307,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[getdist();
+traceln(TruckDistance);]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onRemove]]></Name>
@@ -9254,8 +9358,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653993886745</Id>
 					<Name><![CDATA[unpacking]]></Name>
-					<ExcludeFromBuild>true</ExcludeFromBuild>
-					<X>800</X><Y>730</Y>
+					<X>480</X><Y>760</Y>
 					<Label><X>-5</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9278,7 +9381,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						<Parameter>
 							<Name><![CDATA[delayTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[uniform(10, 3)]]></Code>
+								<Code><![CDATA[uniform(5, 3)]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 							</Value>
 						</Parameter>
@@ -9362,8 +9465,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1653993886757</Id>
 					<Name><![CDATA[CallTruckInit]]></Name>
-					<ExcludeFromBuild>true</ExcludeFromBuild>
-					<X>470</X><Y>740</Y>
+					<X>140</X><Y>770</Y>
 					<Label><X>-15</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9747,7 +9849,7 @@ traceln("i'm going");]]></Code>
 				<EmbeddedObject>
 					<Id>1654060097556</Id>
 					<Name><![CDATA[selectOutput]]></Name>
-					<X>90</X><Y>720</Y>
+					<X>130</X><Y>990</Y>
 					<Label><X>-25</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9834,7 +9936,7 @@ traceln("i'm going");]]></Code>
 				<EmbeddedObject>
 					<Id>1654061149690</Id>
 					<Name><![CDATA[toNextReturn]]></Name>
-					<X>190</X><Y>780</Y>
+					<X>290</X><Y>1050</Y>
 					<Label><X>-15</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9948,7 +10050,9 @@ traceln("i'm going");]]></Code>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[agent.getNearestAgent(Machines).MachineCup++;
-traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
+traceln(agent.getNearestAgent(Machines).MachineCup);
+ReturnCost += 1100;
+Profit.add(ReturnCost);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -9997,7 +10101,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654061231899</Id>
 					<Name><![CDATA[selectOutput1]]></Name>
-					<X>100</X><Y>790</Y>
+					<X>140</X><Y>1060</Y>
 					<Label><X>-35</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10026,7 +10130,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						<Parameter>
 							<Name><![CDATA[probability]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[0.2]]></Code>
+								<Code><![CDATA[0.8]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -10083,8 +10187,8 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				</EmbeddedObject>
 				<EmbeddedObject>
 					<Id>1654063575713</Id>
-					<Name><![CDATA[Naegok1]]></Name>
-					<X>50</X><Y>900</Y>
+					<Name><![CDATA[Banpo3]]></Name>
+					<X>30</X><Y>1210</Y>
 					<Label><X>-15</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10107,7 +10211,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[1]]></Code>
+								<Code><![CDATA[0.1]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
 							</Value>
 						</Parameter>
@@ -10149,6 +10253,9 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[uniform_discr(10, 5)]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[limitArrivals]]></Name>
@@ -10348,7 +10455,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063575747</Id>
 					<Name><![CDATA[toNearReturn1]]></Name>
-					<X>220</X><Y>890</Y>
+					<X>300</X><Y>1200</Y>
 					<Label><X>-20</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10511,7 +10618,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063575767</Id>
 					<Name><![CDATA[sink1]]></Name>
-					<X>350</X><Y>900</Y>
+					<X>430</X><Y>1210</Y>
 					<Label><X>-15</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10577,7 +10684,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063575786</Id>
 					<Name><![CDATA[selectOutput2]]></Name>
-					<X>120</X><Y>900</Y>
+					<X>130</X><Y>1210</Y>
 					<Label><X>-25</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10664,7 +10771,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063575804</Id>
 					<Name><![CDATA[toNextReturn1]]></Name>
-					<X>220</X><Y>960</Y>
+					<X>300</X><Y>1270</Y>
 					<Label><X>-15</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10827,7 +10934,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063575827</Id>
 					<Name><![CDATA[selectOutput3]]></Name>
-					<X>130</X><Y>970</Y>
+					<X>140</X><Y>1280</Y>
 					<Label><X>-35</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10913,8 +11020,8 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				</EmbeddedObject>
 				<EmbeddedObject>
 					<Id>1654063622719</Id>
-					<Name><![CDATA[Naegok2]]></Name>
-					<X>10</X><Y>1060</Y>
+					<Name><![CDATA[Banpo]]></Name>
+					<X>520</X><Y>1000</Y>
 					<Label><X>-15</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10937,7 +11044,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[1]]></Code>
+								<Code><![CDATA[0.1]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
 							</Value>
 						</Parameter>
@@ -10979,6 +11086,9 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[uniform_discr(10, 5)]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[limitArrivals]]></Name>
@@ -11178,7 +11288,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063622739</Id>
 					<Name><![CDATA[toNearReturn2]]></Name>
-					<X>180</X><Y>1050</Y>
+					<X>810</X><Y>990</Y>
 					<Label><X>-20</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -11341,7 +11451,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063622752</Id>
 					<Name><![CDATA[sink2]]></Name>
-					<X>310</X><Y>1060</Y>
+					<X>940</X><Y>1000</Y>
 					<Label><X>-15</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -11407,7 +11517,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063622763</Id>
 					<Name><![CDATA[selectOutput4]]></Name>
-					<X>80</X><Y>1060</Y>
+					<X>620</X><Y>1000</Y>
 					<Label><X>-25</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -11494,7 +11604,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063622774</Id>
 					<Name><![CDATA[toNextReturn2]]></Name>
-					<X>180</X><Y>1120</Y>
+					<X>810</X><Y>1060</Y>
 					<Label><X>-15</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -11657,7 +11767,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063622786</Id>
 					<Name><![CDATA[selectOutput5]]></Name>
-					<X>90</X><Y>1130</Y>
+					<X>630</X><Y>1070</Y>
 					<Label><X>-35</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -11743,8 +11853,8 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				</EmbeddedObject>
 				<EmbeddedObject>
 					<Id>1654063622799</Id>
-					<Name><![CDATA[Naegok3]]></Name>
-					<X>40</X><Y>1240</Y>
+					<Name><![CDATA[Bangbae]]></Name>
+					<X>540</X><Y>1220</Y>
 					<Label><X>-15</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -11767,7 +11877,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[1]]></Code>
+								<Code><![CDATA[0.1]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
 							</Value>
 						</Parameter>
@@ -11809,6 +11919,9 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[uniform_discr(10, 5)]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[limitArrivals]]></Name>
@@ -12008,7 +12121,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063622818</Id>
 					<Name><![CDATA[toNearReturn3]]></Name>
-					<X>210</X><Y>1230</Y>
+					<X>820</X><Y>1210</Y>
 					<Label><X>-20</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12171,7 +12284,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063622831</Id>
 					<Name><![CDATA[sink3]]></Name>
-					<X>340</X><Y>1240</Y>
+					<X>950</X><Y>1220</Y>
 					<Label><X>-15</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12237,7 +12350,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063622841</Id>
 					<Name><![CDATA[selectOutput6]]></Name>
-					<X>110</X><Y>1240</Y>
+					<X>630</X><Y>1220</Y>
 					<Label><X>-25</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12324,7 +12437,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063622853</Id>
 					<Name><![CDATA[toNextReturn3]]></Name>
-					<X>210</X><Y>1300</Y>
+					<X>820</X><Y>1280</Y>
 					<Label><X>-15</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12487,7 +12600,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063622866</Id>
 					<Name><![CDATA[selectOutput7]]></Name>
-					<X>120</X><Y>1310</Y>
+					<X>640</X><Y>1290</Y>
 					<Label><X>-35</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12573,8 +12686,8 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				</EmbeddedObject>
 				<EmbeddedObject>
 					<Id>1654063637982</Id>
-					<Name><![CDATA[Naegok4]]></Name>
-					<X>30</X><Y>1410</Y>
+					<Name><![CDATA[Seocho]]></Name>
+					<X>40</X><Y>1460</Y>
 					<Label><X>-15</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12597,7 +12710,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[1]]></Code>
+								<Code><![CDATA[0.1]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
 							</Value>
 						</Parameter>
@@ -12639,6 +12752,9 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[uniform_discr(10, 5)]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[limitArrivals]]></Name>
@@ -12838,7 +12954,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063638013</Id>
 					<Name><![CDATA[toNearReturn4]]></Name>
-					<X>200</X><Y>1400</Y>
+					<X>300</X><Y>1450</Y>
 					<Label><X>-20</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -13001,7 +13117,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063638026</Id>
 					<Name><![CDATA[sink4]]></Name>
-					<X>330</X><Y>1410</Y>
+					<X>430</X><Y>1460</Y>
 					<Label><X>-15</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -13067,7 +13183,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063638038</Id>
 					<Name><![CDATA[selectOutput8]]></Name>
-					<X>100</X><Y>1410</Y>
+					<X>130</X><Y>1460</Y>
 					<Label><X>-25</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -13154,7 +13270,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063638050</Id>
 					<Name><![CDATA[toNextReturn4]]></Name>
-					<X>200</X><Y>1470</Y>
+					<X>300</X><Y>1520</Y>
 					<Label><X>-15</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -13317,7 +13433,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063638062</Id>
 					<Name><![CDATA[selectOutput9]]></Name>
-					<X>110</X><Y>1480</Y>
+					<X>140</X><Y>1530</Y>
 					<Label><X>-35</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -13403,8 +13519,8 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				</EmbeddedObject>
 				<EmbeddedObject>
 					<Id>1654063638074</Id>
-					<Name><![CDATA[Naegok5]]></Name>
-					<X>60</X><Y>1590</Y>
+					<Name><![CDATA[Yangjae1]]></Name>
+					<X>60</X><Y>1730</Y>
 					<Label><X>-15</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -13427,7 +13543,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[1]]></Code>
+								<Code><![CDATA[0.1]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
 							</Value>
 						</Parameter>
@@ -13469,6 +13585,9 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[uniform_discr(10, 5)]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[limitArrivals]]></Name>
@@ -13668,7 +13787,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063638102</Id>
 					<Name><![CDATA[toNearReturn5]]></Name>
-					<X>230</X><Y>1580</Y>
+					<X>340</X><Y>1720</Y>
 					<Label><X>-20</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -13831,7 +13950,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063638117</Id>
 					<Name><![CDATA[sink5]]></Name>
-					<X>360</X><Y>1590</Y>
+					<X>470</X><Y>1730</Y>
 					<Label><X>-15</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -13897,7 +14016,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063638128</Id>
 					<Name><![CDATA[selectOutput10]]></Name>
-					<X>130</X><Y>1590</Y>
+					<X>170</X><Y>1730</Y>
 					<Label><X>-25</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -13984,7 +14103,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063638140</Id>
 					<Name><![CDATA[toNextReturn5]]></Name>
-					<X>230</X><Y>1650</Y>
+					<X>340</X><Y>1790</Y>
 					<Label><X>-15</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -14147,7 +14266,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063638153</Id>
 					<Name><![CDATA[selectOutput11]]></Name>
-					<X>140</X><Y>1660</Y>
+					<X>180</X><Y>1800</Y>
 					<Label><X>-35</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -14233,8 +14352,8 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				</EmbeddedObject>
 				<EmbeddedObject>
 					<Id>1654063638166</Id>
-					<Name><![CDATA[Naegok6]]></Name>
-					<X>20</X><Y>1750</Y>
+					<Name><![CDATA[Yangjae2]]></Name>
+					<X>540</X><Y>1460</Y>
 					<Label><X>-15</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -14257,7 +14376,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[1]]></Code>
+								<Code><![CDATA[0.1]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
 							</Value>
 						</Parameter>
@@ -14299,6 +14418,9 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[uniform_discr(10, 5)]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[limitArrivals]]></Name>
@@ -14498,7 +14620,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063638189</Id>
 					<Name><![CDATA[toNearReturn6]]></Name>
-					<X>190</X><Y>1740</Y>
+					<X>830</X><Y>1450</Y>
 					<Label><X>-20</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -14661,7 +14783,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063638202</Id>
 					<Name><![CDATA[sink6]]></Name>
-					<X>320</X><Y>1750</Y>
+					<X>960</X><Y>1460</Y>
 					<Label><X>-15</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -14727,7 +14849,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063638213</Id>
 					<Name><![CDATA[selectOutput12]]></Name>
-					<X>90</X><Y>1750</Y>
+					<X>640</X><Y>1460</Y>
 					<Label><X>-25</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -14814,7 +14936,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063638225</Id>
 					<Name><![CDATA[toNextReturn6]]></Name>
-					<X>190</X><Y>1810</Y>
+					<X>830</X><Y>1520</Y>
 					<Label><X>-15</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -14977,7 +15099,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063638237</Id>
 					<Name><![CDATA[selectOutput13]]></Name>
-					<X>100</X><Y>1820</Y>
+					<X>650</X><Y>1530</Y>
 					<Label><X>-35</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -15063,8 +15185,8 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				</EmbeddedObject>
 				<EmbeddedObject>
 					<Id>1654063638249</Id>
-					<Name><![CDATA[Naegok7]]></Name>
-					<X>50</X><Y>1930</Y>
+					<Name><![CDATA[Jamwon]]></Name>
+					<X>560</X><Y>1730</Y>
 					<Label><X>-15</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -15087,7 +15209,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[1]]></Code>
+								<Code><![CDATA[0.1]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
 							</Value>
 						</Parameter>
@@ -15129,6 +15251,9 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[uniform_discr(10, 5)]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[limitArrivals]]></Name>
@@ -15328,7 +15453,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063638269</Id>
 					<Name><![CDATA[toNearReturn7]]></Name>
-					<X>220</X><Y>1920</Y>
+					<X>830</X><Y>1720</Y>
 					<Label><X>-20</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -15491,7 +15616,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063638283</Id>
 					<Name><![CDATA[sink7]]></Name>
-					<X>350</X><Y>1930</Y>
+					<X>960</X><Y>1730</Y>
 					<Label><X>-15</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -15557,7 +15682,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063638294</Id>
 					<Name><![CDATA[selectOutput14]]></Name>
-					<X>120</X><Y>1930</Y>
+					<X>670</X><Y>1730</Y>
 					<Label><X>-25</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -15644,7 +15769,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063638306</Id>
 					<Name><![CDATA[toNextReturn7]]></Name>
-					<X>220</X><Y>1990</Y>
+					<X>830</X><Y>1790</Y>
 					<Label><X>-15</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -15807,7 +15932,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 				<EmbeddedObject>
 					<Id>1654063638320</Id>
 					<Name><![CDATA[selectOutput15]]></Name>
-					<X>130</X><Y>2000</Y>
+					<X>680</X><Y>1800</Y>
 					<Label><X>-35</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -15917,8 +16042,8 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>1050</Width>
-					<Height>630</Height>
+					<Width>1100</Width>
+					<Height>700</Height>
 					<GISShapes>
 					</GISShapes>
 					<Latitude>37.469260428676385</Latitude>
@@ -18363,6 +18488,73 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 					<Latitude>37.485383423411704</Latitude>
 					<Longitude>127.0705593722938</Longitude>
 				</EmbeddedObjectPresentation>
+    			<TimePlot>
+					<Id>1654233296262</Id>
+					<Name><![CDATA[plot]]></Name>
+					<X>1100</X><Y>50</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1654243200000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>780</Width>
+					<Height>540</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>700</Width>
+						<Height>450</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
+					<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>AUTO</VerScaleType>
+					<DrawLine>true</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[Profit]]></Title>
+					<Id>0</Id>
+					<Expression><![CDATA[ReturnCost]]></Expression>
+					<Color>-65536</Color>
+					<Expression2><![CDATA[ReturnCost]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<SamplesToKeep>100</SamplesToKeep>
+					<TimeWindowExpression><![CDATA[100]]></TimeWindowExpression>
+					<FillAreaUnderLine>false</FillAreaUnderLine>
+					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
+    			</TimePlot>
 			</Presentation>
 
 				</Level>
@@ -19837,6 +20029,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 			<Id>1653810161973</Id>
 			<Name><![CDATA[Machine]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
+			<Import><![CDATA[import com.fasterxml.jackson.databind.InjectableValues;]]></Import>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1653810161971</Id>
@@ -19904,11 +20097,11 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 					<OccurrenceDate>1653811200000</OccurrenceDate>
 					<OccurrenceTime Class="CodeUnitValue">
 						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 					</OccurrenceTime>
 					<RecurrenceCode Class="CodeUnitValue">
 						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 					</RecurrenceCode>
 			</DatasetsCreationProperties>
 			<ScaleRuler>
@@ -19941,14 +20134,15 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[int]]></Type>        
 						<InitialValue Class="CodeValue">
-							<Code><![CDATA[300]]></Code>
+							<Code><![CDATA[280]]></Code>
 						</InitialValue>
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
 					<Id>1654059019656</Id>
 					<Name><![CDATA[available]]></Name>
-					<X>250</X><Y>100</Y>
+					<ExcludeFromBuild>true</ExcludeFromBuild>
+					<X>100</X><Y>150</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -20049,14 +20243,16 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>0</X><Y>60</Y></Point>
 					</Points>
-					<IconOffset>20.0</IconOffset>
-					<Properties Source="1653993734262" Target="1653993734277" Trigger="timeout">
+					<IconOffset>30.0</IconOffset>
+					<Properties Source="1653993734262" Target="1653993734277" Trigger="condition">
 						<Action><![CDATA[traceln("Im FULL");]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
+						<Condition><![CDATA[main.Machines.stream().
+filter(m -> m.MachineCup >= MachineCapa * 0.7).
+count() > 0;]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
@@ -20082,15 +20278,21 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 					</Points>
 					<IconOffset>30.0</IconOffset>
 					<Properties Source="1653993734277" Target="1653993734289" Trigger="condition">
-						<Action><![CDATA[main.callTruck.Caller = this;
-traceln(main.callTruck.Caller);
-//main.CallTruckInit.inject();
-traceln("Im full so Calling Truck");]]></Action>
+						<Action><![CDATA[for(Machine m : main.Machines){
+if(m.MachineCup >= MachineCapa * 0.7){
+   main.callTruck.Caller = m;
+   traceln(main.callTruck.Caller);
+   main.CallTruckInit.inject();
+   traceln("Im full so Calling Truck");
+   }
+}]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[MachineCup >= MachineCapa * 0.7]]></Condition>
+						<Condition><![CDATA[main.Machines.stream().
+filter(m -> m.MachineCup >= MachineCapa * 0.7).
+count() > 0;]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
@@ -20116,10 +20318,9 @@ traceln("Im full so Calling Truck");]]></Action>
 						<Point><X>70</X><Y>-240</Y></Point>
 						<Point><X>10</X><Y>-240</Y></Point>
 					</Points>
-					<IconOffset>190.0</IconOffset>
+					<IconOffset>140.0</IconOffset>
 					<Properties Source="1653993734289" Target="1653993734262" Trigger="message">
 						<Action><![CDATA[MachineCup = 0;
-use_available();
 traceln("Im leaving");]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
@@ -20144,6 +20345,7 @@ traceln("Im leaving");]]></Action>
 					<ReturnType><![CDATA[double]]></ReturnType>
 					<Id>1653818542211</Id>
 					<Name><![CDATA[use_available]]></Name>
+					<ExcludeFromBuild>true</ExcludeFromBuild>
 					<X>100</X><Y>100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -20540,11 +20742,11 @@ traceln("Im leaving");]]></Action>
 					<OccurrenceDate>1653811200000</OccurrenceDate>
 					<OccurrenceTime Class="CodeUnitValue">
 						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 					</OccurrenceTime>
 					<RecurrenceCode Class="CodeUnitValue">
 						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 					</RecurrenceCode>
 			</DatasetsCreationProperties>
 			<ScaleRuler>
@@ -20952,11 +21154,11 @@ traceln("Im leaving");]]></Action>
 					<OccurrenceDate>1653811200000</OccurrenceDate>
 					<OccurrenceTime Class="CodeUnitValue">
 						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 					</OccurrenceTime>
 					<RecurrenceCode Class="CodeUnitValue">
 						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 					</RecurrenceCode>
 			</DatasetsCreationProperties>
 			<ScaleRuler>
@@ -20977,6 +21179,29 @@ traceln("Im leaving");]]></Action>
 			</ScaleRuler>
 			<CurrentLevel>1653810352163</CurrentLevel>
 			<ConnectionsId>1653810352159</ConnectionsId>
+			<Variables>
+				<Variable Class="Parameter">
+					<Id>1654234810705</Id>
+					<Name><![CDATA[client]]></Name>
+					<X>100</X><Y>50</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[Machine]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1654234810703</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+			</Variables>
 			<AgentLinks>
 				<AgentLink>
 					<Id>1653810352159</Id>
@@ -21388,11 +21613,11 @@ traceln("Im leaving");]]></Action>
 					<OccurrenceDate>1653811200000</OccurrenceDate>
 					<OccurrenceTime Class="CodeUnitValue">
 						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 					</OccurrenceTime>
 					<RecurrenceCode Class="CodeUnitValue">
 						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 					</RecurrenceCode>
 			</DatasetsCreationProperties>
 			<ScaleRuler>
@@ -21633,11 +21858,11 @@ traceln("Im leaving");]]></Action>
 					<OccurrenceDate>1654070400000</OccurrenceDate>
 					<OccurrenceTime Class="CodeUnitValue">
 						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 					</OccurrenceTime>
 					<RecurrenceCode Class="CodeUnitValue">
 						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 					</RecurrenceCode>
 			</DatasetsCreationProperties>
 			<ScaleRuler>
@@ -21713,6 +21938,167 @@ traceln("Im leaving");]]></Action>
 			<Presentation>
 				<Level>
 					<Id>1653993822824</Id>
+					<Name><![CDATA[level]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
+
+
+				</Level>
+			</Presentation>
+
+		</ActiveObjectClass>
+		<!--   =========   Active Object Class   ========  -->
+		<ActiveObjectClass>
+			<Id>1654234940489</Id>
+			<Name><![CDATA[Order]]></Name>
+			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
+			<Generic>false</Generic>
+			<GenericParameter>
+				<Id>1654234940487</Id>
+				<Name><![CDATA[1654234940487]]></Name>
+				<GenericParameterValue Class="CodeValue">
+					<Code><![CDATA[T extends Agent]]></Code>
+				</GenericParameterValue>
+				<GenericParameterLabel><![CDATA[Generic parameter:]]></GenericParameterLabel>
+			</GenericParameter>
+			<FlowChartsUsage>ENTITY</FlowChartsUsage>
+			<SamplesToKeep>100</SamplesToKeep>
+			<LimitNumberOfArrayElements>false</LimitNumberOfArrayElements>
+			<ElementsLimitValue>100</ElementsLimitValue>
+			<MakeDefaultViewArea>true</MakeDefaultViewArea>
+			<SceneGridColor/>
+			<SceneBackgroundColor/>
+			<SceneSkybox>null</SceneSkybox>
+			<AgentProperties>
+	 			<SpaceType>CONTINUOUS</SpaceType>			
+				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
+				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
+				<RotateAnimationVertically>false</RotateAnimationVertically>
+				<VelocityCode Class="CodeUnitValue">
+					<Code><![CDATA[10]]></Code>
+					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+				</VelocityCode>
+				<PhysicalLength Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalLength>
+				<PhysicalWidth Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalWidth>
+				<PhysicalHeight Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalHeight>
+			</AgentProperties>
+			<EnvironmentProperties>
+					<EnableSteps>false</EnableSteps>
+					<StepDurationCode Class="CodeUnitValue">
+						<Code><![CDATA[1.0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</StepDurationCode>
+					<SpaceType>CONTINUOUS</SpaceType>
+					<WidthCode><![CDATA[500]]></WidthCode>
+					<HeightCode><![CDATA[500]]></HeightCode>
+					<ZHeightCode><![CDATA[0]]></ZHeightCode>
+					<ColumnsCountCode><![CDATA[100]]></ColumnsCountCode>
+					<RowsCountCode><![CDATA[100]]></RowsCountCode>
+					<NeigborhoodType>MOORE</NeigborhoodType>
+					<LayoutType>USER_DEF</LayoutType>
+					<LayoutTypeApplyOnStartup>true</LayoutTypeApplyOnStartup>
+					<NetworkType>USER_DEF</NetworkType>
+					<NetworkTypeApplyOnStartup>true</NetworkTypeApplyOnStartup>
+					<ConnectionsPerAgentCode><![CDATA[2]]></ConnectionsPerAgentCode>
+					<ConnectionsRangeCode><![CDATA[50]]></ConnectionsRangeCode>
+					<NeighborLinkFractionCode><![CDATA[0.95]]></NeighborLinkFractionCode>
+					<MCode><![CDATA[10]]></MCode>
+			</EnvironmentProperties>
+			<DatasetsCreationProperties>
+				<AutoCreate>true</AutoCreate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1654243200000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</RecurrenceCode>
+			</DatasetsCreationProperties>
+			<ScaleRuler>
+				<Id>1654234940485</Id>
+				<Name><![CDATA[scale]]></Name>
+				<X>0</X><Y>-150</Y>
+				<PublicFlag>false</PublicFlag>
+				<PresentationFlag>false</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<Length>100</Length>
+				<Rotation>0</Rotation>
+				<ScaleType>BASED_ON_LENGTH</ScaleType>
+				<ModelLength>10</ModelLength>
+				<LengthUnits>METER</LengthUnits>
+				<Scale>10</Scale>
+				<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
+			</ScaleRuler>
+			<CurrentLevel>1654234940488</CurrentLevel>
+			<ConnectionsId>1654234940484</ConnectionsId>
+			<Variables>
+				<Variable Class="Parameter">
+					<Id>1654234940490</Id>
+					<Name><![CDATA[customer]]></Name>
+					<X>50</X><Y>50</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[Machine]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>0</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+			</Variables>
+			<AgentLinks>
+				<AgentLink>
+					<Id>1654234940484</Id>
+					<Name><![CDATA[connections]]></Name>
+					<X>50</X><Y>-50</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<HandleReceiveInConnections>false</HandleReceiveInConnections>
+					<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
+					<AgentLinkBidirectional>true</AgentLinkBidirectional>
+					<MessageType><![CDATA[Object]]></MessageType>
+					<LineStyle>SOLID</LineStyle>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineZOrder>UNDER_AGENTS</LineZOrder>
+					<LineArrow>NONE</LineArrow>
+					<LineArrowPosition>END</LineArrowPosition>
+				</AgentLink>
+			</AgentLinks>
+
+
+			<Presentation>
+				<Level>
+					<Id>1654234940488</Id>
 					<Name><![CDATA[level]]></Name>
 					<X>0</X><Y>0</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -21814,6 +22200,9 @@ traceln("Im leaving");]]></Action>
 			</Presentation>
 
 			<Parameters>			
+				<Parameter>
+					<ParameterName><![CDATA[TruckNum]]></ParameterName>
+				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
 				<EnableZoomAndPanning>true</EnableZoomAndPanning>
