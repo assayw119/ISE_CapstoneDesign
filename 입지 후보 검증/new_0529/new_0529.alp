@@ -140,10 +140,25 @@
 						</InitialValue>
 					</Properties>
 				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1654243462103</Id>
+					<Name><![CDATA[TruckCost]]></Name>
+					<X>750</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
 				<Variable Class="Parameter">
 					<Id>1654234854221</Id>
 					<Name><![CDATA[TruckNum]]></Name>
-					<X>900</X><Y>-100</Y>
+					<X>900</X><Y>-50</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -233,39 +248,6 @@
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>-90</X><Y>0</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1653993886768</Id>
-					<Name><![CDATA[connector16]]></Name>
-					<X>390</X><Y>780</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[new_0529]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[seize]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Seize]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[new_0529]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[queue]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Queue]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-80</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -524,16 +506,16 @@
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[new_0529]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[queue]]></ItemName>
+						<ItemName><![CDATA[seize]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Queue]]></ClassName>
+						<ClassName><![CDATA[Seize]]></ClassName>
 						<ItemName><![CDATA[in]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>100</X><Y>0</Y></Point>
+						<Point><X>220</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -2395,14 +2377,14 @@
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Body><![CDATA[TruckDistance += Truck.getDistanceGIS(37.4726512,126.838255, callTruck.Caller.getLatitude(), callTruck.Caller.getLongitude());]]></Body>
+					<Body><![CDATA[TruckDistance += Truck.getDistanceGIS(37.4726512,126.838255, callTruck.Caller.getLatitude(), callTruck.Caller.getLongitude())/500;]]></Body>
 				</Function>
 			</Functions>
 			<AnalysisData>
     			<DataSet>
 					<Id>1654233276505</Id>
 					<Name><![CDATA[Profit]]></Name>
-					<X>800</X><Y>-100</Y>
+					<X>900</X><Y>-100</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2420,6 +2402,52 @@
 					</RecurrenceCode>
 					<FreezeXAxis>true</FreezeXAxis>
 					<VerticalAxisExpression><![CDATA[ReturnCost]]></VerticalAxisExpression>
+					<SamplesToKeep>100</SamplesToKeep>
+				</DataSet>
+    			<DataSet>
+					<Id>1654242833577</Id>
+					<Name><![CDATA[distance]]></Name>
+					<X>900</X><Y>-150</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1654243200000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</RecurrenceCode>
+					<FreezeXAxis>true</FreezeXAxis>
+					<VerticalAxisExpression><![CDATA[TruckDistance]]></VerticalAxisExpression>
+					<SamplesToKeep>100</SamplesToKeep>
+				</DataSet>
+    			<DataSet>
+					<Id>1654243534219</Id>
+					<Name><![CDATA[Total]]></Name>
+					<X>900</X><Y>-200</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1654329600000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</RecurrenceCode>
+					<FreezeXAxis>true</FreezeXAxis>
+					<VerticalAxisExpression><![CDATA[TruckCost]]></VerticalAxisExpression>
 					<SamplesToKeep>100</SamplesToKeep>
 				</DataSet>
 			</AnalysisData>
@@ -2515,7 +2543,7 @@
 				<EmbeddedObject>
 					<Id>1653810352185</Id>
 					<Name><![CDATA[trucks]]></Name>
-					<X>410</X><Y>-50</Y>
+					<X>420</X><Y>-50</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2608,7 +2636,7 @@
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[0.1]]></Code>
+								<Code><![CDATA[0.465]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
 							</Value>
 						</Parameter>
@@ -2651,14 +2679,20 @@
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[uniform_discr(10, 5)]]></Code>
+								<Code><![CDATA[(int)exp(0.0174)]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[limitArrivals]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxArrivals]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[4]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[locationType]]></Name>
@@ -2806,8 +2840,8 @@
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[ReturnCost -= 1000;
-Profit.add(ReturnCost);]]></Code>
+								<Code><![CDATA[Profit.add(-1000);
+ReturnCost -= 1000; ]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -2971,8 +3005,8 @@ Profit.add(ReturnCost);]]></Code>
 							<Value Class="CodeValue">
 								<Code><![CDATA[agent.getNearestAgent(Machines).MachineCup++;
 traceln(agent.getNearestAgent(Machines).MachineCup);
-ReturnCost += 1100;
-Profit.add(ReturnCost);]]></Code>
+Profit.add(1100);
+ReturnCost += 1100;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -7963,7 +7997,7 @@ Profit.add(ReturnCost);]]></Code>
 				<EmbeddedObject>
 					<Id>1653992920636</Id>
 					<Name><![CDATA[user]]></Name>
-					<X>210</X><Y>-50</Y>
+					<X>200</X><Y>-50</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7995,117 +8029,6 @@ Profit.add(ReturnCost);]]></Code>
 						<Code><![CDATA[1]]></Code>
 						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 					</InitialSpeedCode>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
-					<Id>1653993886637</Id>
-					<Name><![CDATA[queue]]></Name>
-					<X>270</X><Y>760</Y>
-					<Label><X>-10</X><Y>-15</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Queue]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-							<ClassName><![CDATA[Queue]]></ClassName>
-							<ItemName><![CDATA[1412336242932]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[capacity]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[maximumCapacity]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[entityLocation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[queuing]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[priority]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[comparison]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[enableTimeout]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[timeout]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[enablePreemption]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[restoreEntityLocationOnExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[forceStatisticsCollection]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onEnter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onAtExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExitTimeout]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExitPreempted]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onRemove]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
 					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
 					<XCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
@@ -9309,7 +9232,9 @@ Profit.add(ReturnCost);]]></Code>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[getdist();
-traceln(TruckDistance);]]></Code>
+traceln(TruckDistance);
+distance.add(TruckDistance);
+TruckCost -= (TruckDistance * 2080);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -9415,8 +9340,7 @@ traceln(TruckDistance);]]></Code>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[send("Done", callTruck.Caller);
-]]></Code>
+								<Code><![CDATA[send("Done", callTruck.Caller);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -9722,7 +9646,7 @@ traceln("i'm going");]]></Code>
 				<EmbeddedObject>
 					<Id>1653994224153</Id>
 					<Name><![CDATA[callTruck]]></Name>
-					<X>530</X><Y>-50</Y>
+					<X>550</X><Y>-50</Y>
 					<Label><X>20</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9783,7 +9707,7 @@ traceln("i'm going");]]></Code>
 				<EmbeddedObject>
 					<Id>1653995132800</Id>
 					<Name><![CDATA[machine]]></Name>
-					<X>670</X><Y>-50</Y>
+					<X>700</X><Y>-50</Y>
 					<Label><X>20</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10051,8 +9975,8 @@ traceln("i'm going");]]></Code>
 							<Value Class="CodeValue">
 								<Code><![CDATA[agent.getNearestAgent(Machines).MachineCup++;
 traceln(agent.getNearestAgent(Machines).MachineCup);
-ReturnCost += 1100;
-Profit.add(ReturnCost);]]></Code>
+Profit.add(1100);
+ReturnCost += 1100;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -10211,7 +10135,7 @@ Profit.add(ReturnCost);]]></Code>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[0.1]]></Code>
+								<Code><![CDATA[0.465]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
 							</Value>
 						</Parameter>
@@ -10254,14 +10178,20 @@ Profit.add(ReturnCost);]]></Code>
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[uniform_discr(10, 5)]]></Code>
+								<Code><![CDATA[(int)exp(0.0174)]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[limitArrivals]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxArrivals]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[63]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[locationType]]></Name>
@@ -10408,6 +10338,10 @@ Profit.add(ReturnCost);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[Profit.add(-1000);
+ReturnCost -= 1000; ]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onDiscard]]></Name>
@@ -10569,7 +10503,9 @@ Profit.add(ReturnCost);]]></Code>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[agent.getNearestAgent(Machines).MachineCup++;
-traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
+traceln(agent.getNearestAgent(Machines).MachineCup);
+Profit.add(1100);
+ReturnCost += 1100;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -10885,7 +10821,9 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[agent.getNearestAgent(Machines).MachineCup++;
-traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
+traceln(agent.getNearestAgent(Machines).MachineCup);
+Profit.add(1100);
+ReturnCost += 1100;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -11044,7 +10982,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[0.1]]></Code>
+								<Code><![CDATA[0.465]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
 							</Value>
 						</Parameter>
@@ -11087,14 +11025,20 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[uniform_discr(10, 5)]]></Code>
+								<Code><![CDATA[(int)exp(0.0174)]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[limitArrivals]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxArrivals]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[200]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[locationType]]></Name>
@@ -11241,6 +11185,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[Profit.add(-1000);
+ReturnCost -= 1000; ]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onDiscard]]></Name>
@@ -11402,7 +11350,9 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[agent.getNearestAgent(Machines).MachineCup++;
-traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
+traceln(agent.getNearestAgent(Machines).MachineCup);
+Profit.add(1100);
+ReturnCost += 1100;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -11718,7 +11668,9 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[agent.getNearestAgent(Machines).MachineCup++;
-traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
+traceln(agent.getNearestAgent(Machines).MachineCup);
+Profit.add(1100);
+ReturnCost += 1100;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -11877,7 +11829,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[0.1]]></Code>
+								<Code><![CDATA[0.465]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
 							</Value>
 						</Parameter>
@@ -11920,14 +11872,20 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[uniform_discr(10, 5)]]></Code>
+								<Code><![CDATA[(int)exp(0.0174)]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[limitArrivals]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxArrivals]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[158]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[locationType]]></Name>
@@ -12074,6 +12032,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[Profit.add(-1000);
+ReturnCost -= 1000; ]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onDiscard]]></Name>
@@ -12235,7 +12197,9 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[agent.getNearestAgent(Machines).MachineCup++;
-traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
+traceln(agent.getNearestAgent(Machines).MachineCup);
+Profit.add(1100);
+ReturnCost += 1100;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -12551,7 +12515,9 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[agent.getNearestAgent(Machines).MachineCup++;
-traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
+traceln(agent.getNearestAgent(Machines).MachineCup);
+Profit.add(1100);
+ReturnCost += 1100;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -12710,7 +12676,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[0.1]]></Code>
+								<Code><![CDATA[0.465]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
 							</Value>
 						</Parameter>
@@ -12753,14 +12719,20 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[uniform_discr(10, 5)]]></Code>
+								<Code><![CDATA[(int)exp(0.0174)]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[limitArrivals]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxArrivals]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[159]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[locationType]]></Name>
@@ -12907,6 +12879,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[Profit.add(-1000);
+ReturnCost -= 1000; ]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onDiscard]]></Name>
@@ -13068,7 +13044,9 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[agent.getNearestAgent(Machines).MachineCup++;
-traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
+traceln(agent.getNearestAgent(Machines).MachineCup);
+Profit.add(1100);
+ReturnCost += 1100;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -13384,7 +13362,9 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[agent.getNearestAgent(Machines).MachineCup++;
-traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
+traceln(agent.getNearestAgent(Machines).MachineCup);
+Profit.add(1100);
+ReturnCost += 1100;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -13543,7 +13523,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[0.1]]></Code>
+								<Code><![CDATA[0.465]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
 							</Value>
 						</Parameter>
@@ -13586,14 +13566,20 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[uniform_discr(10, 5)]]></Code>
+								<Code><![CDATA[(int)exp(0.0174)]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[limitArrivals]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxArrivals]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[79]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[locationType]]></Name>
@@ -13740,6 +13726,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[Profit.add(-1000);
+ReturnCost -= 1000; ]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onDiscard]]></Name>
@@ -13901,7 +13891,9 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[agent.getNearestAgent(Machines).MachineCup++;
-traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
+traceln(agent.getNearestAgent(Machines).MachineCup);
+Profit.add(1100);
+ReturnCost += 1100;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -14217,7 +14209,9 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[agent.getNearestAgent(Machines).MachineCup++;
-traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
+traceln(agent.getNearestAgent(Machines).MachineCup);
+Profit.add(1100);
+ReturnCost += 1100;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -14376,7 +14370,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[0.1]]></Code>
+								<Code><![CDATA[0.465]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
 							</Value>
 						</Parameter>
@@ -14419,14 +14413,20 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[uniform_discr(10, 5)]]></Code>
+								<Code><![CDATA[(int)exp(0.0174)]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[limitArrivals]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxArrivals]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[79]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[locationType]]></Name>
@@ -14573,6 +14573,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[Profit.add(-1000);
+ReturnCost -= 1000; ]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onDiscard]]></Name>
@@ -14734,7 +14738,9 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[agent.getNearestAgent(Machines).MachineCup++;
-traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
+traceln(agent.getNearestAgent(Machines).MachineCup);
+Profit.add(1100);
+ReturnCost += 1100;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -15050,7 +15056,9 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[agent.getNearestAgent(Machines).MachineCup++;
-traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
+traceln(agent.getNearestAgent(Machines).MachineCup);
+Profit.add(1100);
+ReturnCost += 1100;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -15209,7 +15217,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[0.1]]></Code>
+								<Code><![CDATA[0.465]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
 							</Value>
 						</Parameter>
@@ -15252,14 +15260,20 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[uniform_discr(10, 5)]]></Code>
+								<Code><![CDATA[(int)exp(0.0174)]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[limitArrivals]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxArrivals]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[9]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[locationType]]></Name>
@@ -15406,6 +15420,10 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[Profit.add(-1000);
+ReturnCost -= 1000; ]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onDiscard]]></Name>
@@ -15567,7 +15585,9 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[agent.getNearestAgent(Machines).MachineCup++;
-traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
+traceln(agent.getNearestAgent(Machines).MachineCup);
+Profit.add(1100);
+ReturnCost += 1100;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -15883,7 +15903,9 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[agent.getNearestAgent(Machines).MachineCup++;
-traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
+traceln(agent.getNearestAgent(Machines).MachineCup);
+Profit.add(1100);
+ReturnCost += 1100;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -18491,7 +18513,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
     			<TimePlot>
 					<Id>1654233296262</Id>
 					<Name><![CDATA[plot]]></Name>
-					<X>1100</X><Y>50</Y>
+					<X>1100</X><Y>10</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -18509,15 +18531,15 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>780</Width>
-					<Height>540</Height>
+					<Width>630</Width>
+					<Height>310</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
 						<XOffset>50</XOffset>
 						<YOffset>30</YOffset>
-						<Width>700</Width>
-						<Height>450</Height>
+						<Width>510</Width>
+						<Height>220</Height>
 						<BackgroundColor>-1</BackgroundColor>
 						<BorderColor>-16777216</BorderColor>
 						<GridColor>-12566464</GridColor>
@@ -18541,7 +18563,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 					<DrawLine>true</DrawLine>
 					<Interpolation>LINEAR</Interpolation>
 					<DatasetExpression>  
-						<Title><![CDATA[Profit]]></Title>
+						<Title><![CDATA[ReturnCost]]></Title>
 					<Id>0</Id>
 					<Expression><![CDATA[ReturnCost]]></Expression>
 					<Color>-65536</Color>
@@ -18551,7 +18573,160 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 						<LineWidth>1.0</LineWidth>
 					</DatasetExpression>
 					<SamplesToKeep>100</SamplesToKeep>
-					<TimeWindowExpression><![CDATA[100]]></TimeWindowExpression>
+					<TimeWindowExpression><![CDATA[10]]></TimeWindowExpression>
+					<FillAreaUnderLine>false</FillAreaUnderLine>
+					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
+    			</TimePlot>
+				<Text>
+					<Id>1654405583037</Id>
+					<Name><![CDATA[text]]></Name>
+					<X>1330</X><Y>710</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-65536</Color>
+					<Text><![CDATA[TruckCost]]></Text>
+					<TextCode><![CDATA[TruckCost]]></TextCode>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>28</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1654406018865</Id>
+					<Name><![CDATA[text1]]></Name>
+					<X>1170</X><Y>710</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[TruckCost]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>28</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1654406246474</Id>
+					<Name><![CDATA[text2]]></Name>
+					<X>1170</X><Y>350</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[UserCost]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>28</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1654406270967</Id>
+					<Name><![CDATA[text3]]></Name>
+					<X>1330</X><Y>350</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-65536</Color>
+					<Text><![CDATA[ReturnCost]]></Text>
+					<TextCode><![CDATA[ReturnCost]]></TextCode>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>28</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+    			<TimePlot>
+					<Id>1654406574828</Id>
+					<Name><![CDATA[plot1]]></Name>
+					<X>1100</X><Y>410</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1654416000000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>630</Width>
+					<Height>280</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>550</Width>
+						<Height>190</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
+					<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>AUTO</VerScaleType>
+					<DrawLine>true</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[TruckDistance]]></Title>
+					<Id>0</Id>
+					<Expression><![CDATA[my_dataset]]></Expression>
+					<Color>-16711681</Color>
+					<Expression2><![CDATA[TruckDistance]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<SamplesToKeep>100</SamplesToKeep>
+					<TimeWindowExpression><![CDATA[10]]></TimeWindowExpression>
 					<FillAreaUnderLine>false</FillAreaUnderLine>
 					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
     			</TimePlot>
@@ -20250,9 +20425,7 @@ traceln(agent.getNearestAgent(Machines).MachineCup);]]></Code>
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[main.Machines.stream().
-filter(m -> m.MachineCup >= MachineCapa * 0.7).
-count() > 0;]]></Condition>
+						<Condition><![CDATA[MachineCup >= MachineCapa * 0.7;]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
@@ -20278,21 +20451,17 @@ count() > 0;]]></Condition>
 					</Points>
 					<IconOffset>30.0</IconOffset>
 					<Properties Source="1653993734277" Target="1653993734289" Trigger="condition">
-						<Action><![CDATA[for(Machine m : main.Machines){
-if(m.MachineCup >= MachineCapa * 0.7){
-   main.callTruck.Caller = m;
-   traceln(main.callTruck.Caller);
-   main.CallTruckInit.inject();
-   traceln("Im full so Calling Truck");
-   }
-}]]></Action>
+						<Action><![CDATA[main.callTruck.Caller = this;
+traceln(main.callTruck.Caller);
+main.CallTruckInit.inject();
+traceln("Im full so Calling Truck");
+]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[main.Machines.stream().
-filter(m -> m.MachineCup >= MachineCapa * 0.7).
-count() > 0;]]></Condition>
+						<Condition><![CDATA[MachineCup >= MachineCapa * 0.7;
+]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
@@ -21714,10 +21883,10 @@ traceln("Im leaving");]]></Action>
 
 			<Presentation>
 				<Group>
-					<Id>1653993360221</Id>
+					<Id>1654244275543</Id>
 					<Name><![CDATA[person]]></Name>
 					<X>0</X><Y>0</Y>
-					<Label><X>-20</X><Y>20</Y></Label>
+					<Label><X>-19</X><Y>20</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
@@ -21728,10 +21897,83 @@ traceln("Im leaving");]]></Action>
 
 			<Presentation>
 				<Curve ControlPoints="true">
-					<Id>1653993360223</Id>
-					<Name><![CDATA[shapeBody]]></Name>
-					<X>-2</X><Y>-7</Y>
-					<Label><X>-20</X><Y>28</Y></Label>
+					<Id>1654244275545</Id>
+					<Name><![CDATA[_ps25]]></Name>
+					<X>-2</X><Y>9</Y>
+					<Label><X>-20</X><Y>40</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-9404272</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<BeginArrowSize>1</BeginArrowSize>
+					<BeginArrowStyle>0</BeginArrowStyle>
+					<EndArrowSize>1</EndArrowSize>
+					<EndArrowStyle>0</EndArrowStyle>
+					<FillColor>-1</FillColor>
+					<FillMaterial>null</FillMaterial>
+					<Points>
+					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+					   <Point><X>4</X><Y>0</Y><Z>0</Z></Point>
+					   <Point><X>4</X><Y>0</Y><Z>0</Z></Point>
+					   <Point><X>4</X><Y>-1</Y><Z>0</Z></Point>
+					   <Point><X>4</X><Y>-1</Y><Z>0</Z></Point>
+					   <Point><X>2</X><Y>-1</Y><Z>0</Z></Point>
+					   <Point><X>0</X><Y>-1</Y><Z>0</Z></Point>
+					   <Point><X>0</X><Y>-1</Y><Z>0</Z></Point>
+					</Points>
+					<Closed>true</Closed>
+				</Curve>
+				<Curve ControlPoints="true">
+					<Id>1654244275547</Id>
+					<Name><![CDATA[_ps26]]></Name>
+					<X>1</X><Y>8</Y>
+					<Label><X>-20</X><Y>40</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-9404272</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<BeginArrowSize>1</BeginArrowSize>
+					<BeginArrowStyle>0</BeginArrowStyle>
+					<EndArrowSize>1</EndArrowSize>
+					<EndArrowStyle>0</EndArrowStyle>
+					<FillColor>-1</FillColor>
+					<FillMaterial>null</FillMaterial>
+					<Points>
+					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+					   <Point><X>-2</X><Y>0</Y><Z>0</Z></Point>
+					   <Point><X>-2</X><Y>0</Y><Z>0</Z></Point>
+					   <Point><X>-2</X><Y>0</Y><Z>0</Z></Point>
+					   <Point><X>-3</X><Y>-8</Y><Z>0</Z></Point>
+					   <Point><X>-3</X><Y>-8</Y><Z>0</Z></Point>
+					   <Point><X>-3</X><Y>-8</Y><Z>0</Z></Point>
+					   <Point><X>1</X><Y>-8</Y><Z>0</Z></Point>
+					   <Point><X>1</X><Y>-8</Y><Z>0</Z></Point>
+					   <Point><X>1</X><Y>-8</Y><Z>0</Z></Point>
+					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+					</Points>
+					<Closed>true</Closed>
+				</Curve>
+				<Curve ControlPoints="true">
+					<Id>1654244275549</Id>
+					<Name><![CDATA[_ps27]]></Name>
+					<X>0</X><Y>-4</Y>
+					<Label><X>-20</X><Y>40</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
@@ -21747,33 +21989,158 @@ traceln("Im leaving");]]></Action>
 					<BeginArrowStyle>0</BeginArrowStyle>
 					<EndArrowSize>1</EndArrowSize>
 					<EndArrowStyle>0</EndArrowStyle>
-					<FillColor>-16777216</FillColor>
+					<FillColor>-1722998</FillColor>
 					<FillMaterial>null</FillMaterial>
 					<Points>
 					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>0</X><Y>4</Y><Z>0</Z></Point>
-					   <Point><X>3</X><Y>2</Y><Z>0</Z></Point>
-					   <Point><X>-1</X><Y>3</Y><Z>0</Z></Point>
-					   <Point><X>-2</X><Y>3</Y><Z>0</Z></Point>
-					   <Point><X>-2</X><Y>10</Y><Z>0</Z></Point>
-					   <Point><X>-2</X><Y>11</Y><Z>0</Z></Point>
-					   <Point><X>0</X><Y>11</Y><Z>0</Z></Point>
-					   <Point><X>-1</X><Y>9</Y><Z>0</Z></Point>
-					   <Point><X>0</X><Y>17</Y><Z>0</Z></Point>
-					   <Point><X>1</X><Y>17</Y><Z>0</Z></Point>
-					   <Point><X>3</X><Y>17</Y><Z>0</Z></Point>
-					   <Point><X>4</X><Y>17</Y><Z>0</Z></Point>
-					   <Point><X>5</X><Y>9</Y><Z>0</Z></Point>
-					   <Point><X>4</X><Y>11</Y><Z>0</Z></Point>
-					   <Point><X>6</X><Y>11</Y><Z>0</Z></Point>
-					   <Point><X>6</X><Y>10</Y><Z>0</Z></Point>
-					   <Point><X>6</X><Y>3</Y><Z>0</Z></Point>
-					   <Point><X>5</X><Y>3</Y><Z>0</Z></Point>
-					   <Point><X>1</X><Y>2</Y><Z>0</Z></Point>
+					   <Point><X>2</X><Y>0</Y><Z>0</Z></Point>
+					   <Point><X>3</X><Y>-4</Y><Z>0</Z></Point>
+					   <Point><X>0</X><Y>-4</Y><Z>0</Z></Point>
+					   <Point><X>-3</X><Y>-4</Y><Z>0</Z></Point>
+					   <Point><X>-2</X><Y>0</Y><Z>0</Z></Point>
+					</Points>
+					<Closed>true</Closed>
+				</Curve>
+				<Curve ControlPoints="true">
+					<Id>1654244275551</Id>
+					<Name><![CDATA[_ps28]]></Name>
+					<X>-1</X><Y>-4</Y>
+					<Label><X>-20</X><Y>40</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-9404272</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<BeginArrowSize>1</BeginArrowSize>
+					<BeginArrowStyle>0</BeginArrowStyle>
+					<EndArrowSize>1</EndArrowSize>
+					<EndArrowStyle>0</EndArrowStyle>
+					<FillColor>-1</FillColor>
+					<FillMaterial>null</FillMaterial>
+					<Points>
+					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+					   <Point><X>-2</X><Y>0</Y><Z>0</Z></Point>
+					   <Point><X>-2</X><Y>4</Y><Z>0</Z></Point>
+					   <Point><X>-2</X><Y>4</Y><Z>0</Z></Point>
+					   <Point><X>-2</X><Y>4</Y><Z>0</Z></Point>
+					   <Point><X>-1</X><Y>5</Y><Z>0</Z></Point>
+					   <Point><X>-1</X><Y>5</Y><Z>0</Z></Point>
+					   <Point><X>-1</X><Y>5</Y><Z>0</Z></Point>
+					   <Point><X>-1</X><Y>7</Y><Z>0</Z></Point>
+					   <Point><X>-1</X><Y>7</Y><Z>0</Z></Point>
+					   <Point><X>-1</X><Y>7</Y><Z>0</Z></Point>
+					   <Point><X>3</X><Y>7</Y><Z>0</Z></Point>
+					   <Point><X>3</X><Y>7</Y><Z>0</Z></Point>
+					   <Point><X>3</X><Y>7</Y><Z>0</Z></Point>
+					   <Point><X>3</X><Y>5</Y><Z>0</Z></Point>
+					   <Point><X>3</X><Y>5</Y><Z>0</Z></Point>
+					   <Point><X>3</X><Y>5</Y><Z>0</Z></Point>
+					   <Point><X>4</X><Y>4</Y><Z>0</Z></Point>
+					   <Point><X>4</X><Y>4</Y><Z>0</Z></Point>
 					   <Point><X>4</X><Y>4</Y><Z>0</Z></Point>
 					   <Point><X>4</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>4</X><Y>-3</Y><Z>0</Z></Point>
+					   <Point><X>2</X><Y>0</Y><Z>0</Z></Point>
+					   <Point><X>2</X><Y>0</Y><Z>0</Z></Point>
+					   <Point><X>1</X><Y>1</Y><Z>0</Z></Point>
+					   <Point><X>1</X><Y>1</Y><Z>0</Z></Point>
+					   <Point><X>1</X><Y>1</Y><Z>0</Z></Point>
+					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+					</Points>
+					<Closed>true</Closed>
+				</Curve>
+				<Line>
+					<Id>1654244275553</Id>
+					<Name><![CDATA[_ps29]]></Name>
+					<X>2</X><Y>1</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-9404272</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<BeginArrowSize>1</BeginArrowSize>
+					<BeginArrowStyle>0</BeginArrowStyle>
+					<EndArrowSize>1</EndArrowSize>
+					<EndArrowStyle>0</EndArrowStyle>
+					<Dx>-2</Dx>
+					<Dy>-1</Dy>
+					<Dz>0</Dz>
+				</Line>
+				<Polyline>
+					<Id>1654244275555</Id>
+					<Name><![CDATA[_ps30]]></Name>
+					<X>-2</X><Y>1</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-9404272</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<BeginArrowSize>1</BeginArrowSize>
+					<BeginArrowStyle>0</BeginArrowStyle>
+					<EndArrowSize>1</EndArrowSize>
+					<EndArrowStyle>0</EndArrowStyle>
+					<FillColor/>
+					<FillMaterial>null</FillMaterial>
+					<Points>
+					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+					   <Point><X>3</X><Y>-2</Y><Z>0</Z></Point>
+					</Points>
+					<Closed>false</Closed>
+				</Polyline>
+				<Curve ControlPoints="true">
+					<Id>1654244275557</Id>
+					<Name><![CDATA[_ps31]]></Name>
+					<X>2</X><Y>-6</Y>
+					<Label><X>-20</X><Y>40</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor/>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<BeginArrowSize>1</BeginArrowSize>
+					<BeginArrowStyle>0</BeginArrowStyle>
+					<EndArrowSize>1</EndArrowSize>
+					<EndArrowStyle>0</EndArrowStyle>
+					<FillColor>-10340825</FillColor>
+					<FillMaterial>null</FillMaterial>
+					<Points>
+					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
 					   <Point><X>0</X><Y>-3</Y><Z>0</Z></Point>
+					   <Point><X>-4</X><Y>-3</Y><Z>0</Z></Point>
+					   <Point><X>-4</X><Y>0</Y><Z>0</Z></Point>
+					   <Point><X>-4</X><Y>1</Y><Z>0</Z></Point>
+					   <Point><X>-3</X><Y>-1</Y><Z>0</Z></Point>
+					   <Point><X>-3</X><Y>-1</Y><Z>0</Z></Point>
+					   <Point><X>-2</X><Y>-1</Y><Z>0</Z></Point>
+					   <Point><X>-2</X><Y>-1</Y><Z>0</Z></Point>
+					   <Point><X>-1</X><Y>-1</Y><Z>0</Z></Point>
+					   <Point><X>-1</X><Y>-1</Y><Z>0</Z></Point>
+					   <Point><X>0</X><Y>1</Y><Z>0</Z></Point>
 					</Points>
 					<Closed>true</Closed>
 				</Curve>
@@ -22170,7 +22537,7 @@ traceln("Im leaving");]]></Action>
 			<MaximumMemory>512</MaximumMemory>
 			<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
 			<CustomGeneratorCode>new Random()</CustomGeneratorCode>
-			<SeedValue>1</SeedValue>
+			<SeedValue>2022</SeedValue>
 			<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
 			<VmArgs><![CDATA[]]></VmArgs>
 			<LoadRootFromSnapshot>false</LoadRootFromSnapshot>
