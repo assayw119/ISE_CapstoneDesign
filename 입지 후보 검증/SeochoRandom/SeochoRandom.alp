@@ -10,7 +10,7 @@
 	<Name><![CDATA[SeochoRandom]]></Name>
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[seochorandom]]></JavaPackageName>
-	<ModelTimeUnit><![CDATA[Minute]]></ModelTimeUnit>
+	<ModelTimeUnit><![CDATA[Day]]></ModelTimeUnit>
 	<ActiveObjectClasses>
 		<!--   =========   Active Object Class   ========  -->
 		<ActiveObjectClass>
@@ -84,11 +84,11 @@
 					<OccurrenceDate>1654416000000</OccurrenceDate>
 					<OccurrenceTime Class="CodeUnitValue">
 						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 					</OccurrenceTime>
 					<RecurrenceCode Class="CodeUnitValue">
 						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 					</RecurrenceCode>
 			</DatasetsCreationProperties>
 			<ScaleRuler>
@@ -7785,7 +7785,7 @@
 						<Parameter>
 							<Name><![CDATA[maxArrivals]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[4]]></Code>
+								<Code><![CDATA[407]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -10206,7 +10206,7 @@ ReturnCost += 1100;]]></Code>
 						<Parameter>
 							<Name><![CDATA[maxArrivals]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[63]]></Code>
+								<Code><![CDATA[480]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -11050,7 +11050,7 @@ ReturnCost += 1100;]]></Code>
 						<Parameter>
 							<Name><![CDATA[maxArrivals]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[200]]></Code>
+								<Code><![CDATA[1425]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -11894,7 +11894,7 @@ ReturnCost += 1100;]]></Code>
 						<Parameter>
 							<Name><![CDATA[maxArrivals]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[158]]></Code>
+								<Code><![CDATA[1710]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -12738,7 +12738,7 @@ ReturnCost += 1100;]]></Code>
 						<Parameter>
 							<Name><![CDATA[maxArrivals]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[159]]></Code>
+								<Code><![CDATA[3560]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -13582,7 +13582,7 @@ ReturnCost += 1100;]]></Code>
 						<Parameter>
 							<Name><![CDATA[maxArrivals]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[79]]></Code>
+								<Code><![CDATA[910]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -14426,7 +14426,7 @@ ReturnCost += 1100;]]></Code>
 						<Parameter>
 							<Name><![CDATA[maxArrivals]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[79]]></Code>
+								<Code><![CDATA[910]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -15270,7 +15270,7 @@ ReturnCost += 1100;]]></Code>
 						<Parameter>
 							<Name><![CDATA[maxArrivals]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[9]]></Code>
+								<Code><![CDATA[603]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -20377,11 +20377,11 @@ ReturnCost += 1100;]]></Code>
 					<OccurrenceDate>1654416000000</OccurrenceDate>
 					<OccurrenceTime Class="CodeUnitValue">
 						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 					</OccurrenceTime>
 					<RecurrenceCode Class="CodeUnitValue">
 						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 					</RecurrenceCode>
 			</DatasetsCreationProperties>
 			<ScaleRuler>
@@ -20979,11 +20979,11 @@ traceln("Im leaving");]]></Action>
 					<OccurrenceDate>1654416000000</OccurrenceDate>
 					<OccurrenceTime Class="CodeUnitValue">
 						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 					</OccurrenceTime>
 					<RecurrenceCode Class="CodeUnitValue">
 						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 					</RecurrenceCode>
 			</DatasetsCreationProperties>
 			<ScaleRuler>
@@ -21415,11 +21415,11 @@ traceln("Im leaving");]]></Action>
 					<OccurrenceDate>1654416000000</OccurrenceDate>
 					<OccurrenceTime Class="CodeUnitValue">
 						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 					</OccurrenceTime>
 					<RecurrenceCode Class="CodeUnitValue">
 						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 					</RecurrenceCode>
 			</DatasetsCreationProperties>
 			<ScaleRuler>
@@ -21827,11 +21827,11 @@ traceln("Im leaving");]]></Action>
 					<OccurrenceDate>1654416000000</OccurrenceDate>
 					<OccurrenceTime Class="CodeUnitValue">
 						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 					</OccurrenceTime>
 					<RecurrenceCode Class="CodeUnitValue">
 						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 					</RecurrenceCode>
 			</DatasetsCreationProperties>
 			<ScaleRuler>
@@ -22247,11 +22247,11 @@ traceln("Im leaving");]]></Action>
 					<OccurrenceDate>1654416000000</OccurrenceDate>
 					<OccurrenceTime Class="CodeUnitValue">
 						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 					</OccurrenceTime>
 					<RecurrenceCode Class="CodeUnitValue">
 						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 					</RecurrenceCode>
 			</DatasetsCreationProperties>
 			<ScaleRuler>
