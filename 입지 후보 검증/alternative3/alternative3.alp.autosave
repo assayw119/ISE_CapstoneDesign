@@ -7835,6 +7835,10 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[speed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[4.8]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[newEntity]]></Name>
@@ -8725,7 +8729,7 @@ ReturnCost += 1100;]]></Code>
 						<Parameter>
 							<Name><![CDATA[speed]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[120]]></Code>
+								<Code><![CDATA[80]]></Code>
 								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
 							</Value>
 						</Parameter>
@@ -10256,6 +10260,10 @@ ReturnCost += 1100;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[speed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[4.8]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[newEntity]]></Name>
@@ -11100,6 +11108,10 @@ ReturnCost += 1100;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[speed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[4.8]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[newEntity]]></Name>
@@ -11944,6 +11956,10 @@ ReturnCost += 1100;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[speed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[4.8]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[newEntity]]></Name>
@@ -12788,6 +12804,10 @@ ReturnCost += 1100;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[speed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[4.8]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[newEntity]]></Name>
@@ -13632,6 +13652,10 @@ ReturnCost += 1100;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[speed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[4.8]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[newEntity]]></Name>
@@ -14476,6 +14500,10 @@ ReturnCost += 1100;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[speed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[4.8]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[newEntity]]></Name>
@@ -15320,6 +15348,10 @@ ReturnCost += 1100;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[speed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[4.8]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[newEntity]]></Name>
@@ -18673,21 +18705,21 @@ ReturnCost += 1100;]]></Code>
 					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
 					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
 					<VerScaleType>AUTO</VerScaleType>
-					<DrawLine>true</DrawLine>
+					<DrawLine>false</DrawLine>
 					<Interpolation>LINEAR</Interpolation>
 					<DatasetExpression>  
 						<Title><![CDATA[ReturnCost]]></Title>
 					<Id>1654501798413</Id>
 					<Expression><![CDATA[ReturnCost]]></Expression>
 					<Color>-65536</Color>
-					<Expression2><![CDATA[ReturnCost]]></Expression2>
+					<Expression2><![CDATA[ReturnCost+TruckCost]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 						<PointStyle>NONE</PointStyle>
 						<LineWidth>1.0</LineWidth>
 					</DatasetExpression>
-					<SamplesToKeep>100</SamplesToKeep>
+					<SamplesToKeep>10000</SamplesToKeep>
 					<TimeWindowExpression><![CDATA[10]]></TimeWindowExpression>
-					<FillAreaUnderLine>false</FillAreaUnderLine>
+					<FillAreaUnderLine>true</FillAreaUnderLine>
 					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
     			</TimePlot>
 				<Text>
@@ -21041,10 +21073,10 @@ traceln("Im leaving");]]></Action>
 
 			<Presentation>
 				<Group>
-					<Id>1654501518790</Id>
-					<Name><![CDATA[patient]]></Name>
+					<Id>1654824051106</Id>
+					<Name><![CDATA[person]]></Name>
 					<X>0</X><Y>0</Y>
-					<Label><X>-19</X><Y>20</Y></Label>
+					<Label><X>-16</X><Y>15.455</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
@@ -21055,83 +21087,10 @@ traceln("Im leaving");]]></Action>
 
 			<Presentation>
 				<Curve ControlPoints="true">
-					<Id>1654501518792</Id>
-					<Name><![CDATA[_ps25]]></Name>
-					<X>-2</X><Y>9</Y>
-					<Label><X>-20</X><Y>40</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-9404272</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<BeginArrowSize>1</BeginArrowSize>
-					<BeginArrowStyle>0</BeginArrowStyle>
-					<EndArrowSize>1</EndArrowSize>
-					<EndArrowStyle>0</EndArrowStyle>
-					<FillColor>-1</FillColor>
-					<FillMaterial>null</FillMaterial>
-					<Points>
-					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>4</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>4</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>4</X><Y>-1</Y><Z>0</Z></Point>
-					   <Point><X>4</X><Y>-1</Y><Z>0</Z></Point>
-					   <Point><X>2</X><Y>-1</Y><Z>0</Z></Point>
-					   <Point><X>0</X><Y>-1</Y><Z>0</Z></Point>
-					   <Point><X>0</X><Y>-1</Y><Z>0</Z></Point>
-					</Points>
-					<Closed>true</Closed>
-				</Curve>
-				<Curve ControlPoints="true">
-					<Id>1654501518794</Id>
-					<Name><![CDATA[_ps26]]></Name>
-					<X>1</X><Y>8</Y>
-					<Label><X>-20</X><Y>40</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-9404272</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<BeginArrowSize>1</BeginArrowSize>
-					<BeginArrowStyle>0</BeginArrowStyle>
-					<EndArrowSize>1</EndArrowSize>
-					<EndArrowStyle>0</EndArrowStyle>
-					<FillColor>-1</FillColor>
-					<FillMaterial>null</FillMaterial>
-					<Points>
-					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>-2</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>-2</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>-2</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>-3</X><Y>-8</Y><Z>0</Z></Point>
-					   <Point><X>-3</X><Y>-8</Y><Z>0</Z></Point>
-					   <Point><X>-3</X><Y>-8</Y><Z>0</Z></Point>
-					   <Point><X>1</X><Y>-8</Y><Z>0</Z></Point>
-					   <Point><X>1</X><Y>-8</Y><Z>0</Z></Point>
-					   <Point><X>1</X><Y>-8</Y><Z>0</Z></Point>
-					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					</Points>
-					<Closed>true</Closed>
-				</Curve>
-				<Curve ControlPoints="true">
-					<Id>1654501518796</Id>
-					<Name><![CDATA[_ps27]]></Name>
-					<X>0</X><Y>-4</Y>
-					<Label><X>-20</X><Y>40</Y></Label>
+					<Id>1654824051108</Id>
+					<Name><![CDATA[shapeBody]]></Name>
+					<X>-1.6</X><Y>-5.409</Y>
+					<Label><X>-20</X><Y>28</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
@@ -21147,158 +21106,33 @@ traceln("Im leaving");]]></Action>
 					<BeginArrowStyle>0</BeginArrowStyle>
 					<EndArrowSize>1</EndArrowSize>
 					<EndArrowStyle>0</EndArrowStyle>
-					<FillColor>-1722998</FillColor>
+					<FillColor>-16777216</FillColor>
 					<FillMaterial>null</FillMaterial>
 					<Points>
 					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>2</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>3</X><Y>-4</Y><Z>0</Z></Point>
-					   <Point><X>0</X><Y>-4</Y><Z>0</Z></Point>
-					   <Point><X>-3</X><Y>-4</Y><Z>0</Z></Point>
-					   <Point><X>-2</X><Y>0</Y><Z>0</Z></Point>
-					</Points>
-					<Closed>true</Closed>
-				</Curve>
-				<Curve ControlPoints="true">
-					<Id>1654501518798</Id>
-					<Name><![CDATA[_ps28]]></Name>
-					<X>-1</X><Y>-4</Y>
-					<Label><X>-20</X><Y>40</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-9404272</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<BeginArrowSize>1</BeginArrowSize>
-					<BeginArrowStyle>0</BeginArrowStyle>
-					<EndArrowSize>1</EndArrowSize>
-					<EndArrowStyle>0</EndArrowStyle>
-					<FillColor>-1</FillColor>
-					<FillMaterial>null</FillMaterial>
-					<Points>
-					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>-2</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>-2</X><Y>4</Y><Z>0</Z></Point>
-					   <Point><X>-2</X><Y>4</Y><Z>0</Z></Point>
-					   <Point><X>-2</X><Y>4</Y><Z>0</Z></Point>
-					   <Point><X>-1</X><Y>5</Y><Z>0</Z></Point>
-					   <Point><X>-1</X><Y>5</Y><Z>0</Z></Point>
-					   <Point><X>-1</X><Y>5</Y><Z>0</Z></Point>
-					   <Point><X>-1</X><Y>7</Y><Z>0</Z></Point>
-					   <Point><X>-1</X><Y>7</Y><Z>0</Z></Point>
-					   <Point><X>-1</X><Y>7</Y><Z>0</Z></Point>
-					   <Point><X>3</X><Y>7</Y><Z>0</Z></Point>
-					   <Point><X>3</X><Y>7</Y><Z>0</Z></Point>
-					   <Point><X>3</X><Y>7</Y><Z>0</Z></Point>
-					   <Point><X>3</X><Y>5</Y><Z>0</Z></Point>
-					   <Point><X>3</X><Y>5</Y><Z>0</Z></Point>
-					   <Point><X>3</X><Y>5</Y><Z>0</Z></Point>
-					   <Point><X>4</X><Y>4</Y><Z>0</Z></Point>
-					   <Point><X>4</X><Y>4</Y><Z>0</Z></Point>
-					   <Point><X>4</X><Y>4</Y><Z>0</Z></Point>
-					   <Point><X>4</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>2</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>2</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>1</X><Y>1</Y><Z>0</Z></Point>
-					   <Point><X>1</X><Y>1</Y><Z>0</Z></Point>
-					   <Point><X>1</X><Y>1</Y><Z>0</Z></Point>
-					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					</Points>
-					<Closed>true</Closed>
-				</Curve>
-				<Line>
-					<Id>1654501518800</Id>
-					<Name><![CDATA[_ps29]]></Name>
-					<X>2</X><Y>1</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-9404272</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<BeginArrowSize>1</BeginArrowSize>
-					<BeginArrowStyle>0</BeginArrowStyle>
-					<EndArrowSize>1</EndArrowSize>
-					<EndArrowStyle>0</EndArrowStyle>
-					<Dx>-2</Dx>
-					<Dy>-1</Dy>
-					<Dz>0</Dz>
-				</Line>
-				<Polyline>
-					<Id>1654501518802</Id>
-					<Name><![CDATA[_ps30]]></Name>
-					<X>-2</X><Y>1</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-9404272</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<BeginArrowSize>1</BeginArrowSize>
-					<BeginArrowStyle>0</BeginArrowStyle>
-					<EndArrowSize>1</EndArrowSize>
-					<EndArrowStyle>0</EndArrowStyle>
-					<FillColor/>
-					<FillMaterial>null</FillMaterial>
-					<Points>
-					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>3</X><Y>-2</Y><Z>0</Z></Point>
-					</Points>
-					<Closed>false</Closed>
-				</Polyline>
-				<Curve ControlPoints="true">
-					<Id>1654501518804</Id>
-					<Name><![CDATA[_ps31]]></Name>
-					<X>2</X><Y>-6</Y>
-					<Label><X>-20</X><Y>40</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor/>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<BeginArrowSize>1</BeginArrowSize>
-					<BeginArrowStyle>0</BeginArrowStyle>
-					<EndArrowSize>1</EndArrowSize>
-					<EndArrowStyle>0</EndArrowStyle>
-					<FillColor>-10340825</FillColor>
-					<FillMaterial>null</FillMaterial>
-					<Points>
-					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>0</X><Y>-3</Y><Z>0</Z></Point>
-					   <Point><X>-4</X><Y>-3</Y><Z>0</Z></Point>
-					   <Point><X>-4</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>-4</X><Y>1</Y><Z>0</Z></Point>
-					   <Point><X>-3</X><Y>-1</Y><Z>0</Z></Point>
-					   <Point><X>-3</X><Y>-1</Y><Z>0</Z></Point>
-					   <Point><X>-2</X><Y>-1</Y><Z>0</Z></Point>
-					   <Point><X>-2</X><Y>-1</Y><Z>0</Z></Point>
-					   <Point><X>-1</X><Y>-1</Y><Z>0</Z></Point>
-					   <Point><X>-1</X><Y>-1</Y><Z>0</Z></Point>
-					   <Point><X>0</X><Y>1</Y><Z>0</Z></Point>
+					   <Point><X>0</X><Y>3.091</Y><Z>0</Z></Point>
+					   <Point><X>2.4</X><Y>1.545</Y><Z>0</Z></Point>
+					   <Point><X>-0.8</X><Y>2.318</Y><Z>0</Z></Point>
+					   <Point><X>-1.6</X><Y>2.318</Y><Z>0</Z></Point>
+					   <Point><X>-1.6</X><Y>7.727</Y><Z>0</Z></Point>
+					   <Point><X>-1.6</X><Y>8.5</Y><Z>0</Z></Point>
+					   <Point><X>0</X><Y>8.5</Y><Z>0</Z></Point>
+					   <Point><X>-0.8</X><Y>6.955</Y><Z>0</Z></Point>
+					   <Point><X>0</X><Y>13.136</Y><Z>0</Z></Point>
+					   <Point><X>0.8</X><Y>13.136</Y><Z>0</Z></Point>
+					   <Point><X>2.4</X><Y>13.136</Y><Z>0</Z></Point>
+					   <Point><X>3.2</X><Y>13.136</Y><Z>0</Z></Point>
+					   <Point><X>4</X><Y>6.955</Y><Z>0</Z></Point>
+					   <Point><X>3.2</X><Y>8.5</Y><Z>0</Z></Point>
+					   <Point><X>4.8</X><Y>8.5</Y><Z>0</Z></Point>
+					   <Point><X>4.8</X><Y>7.727</Y><Z>0</Z></Point>
+					   <Point><X>4.8</X><Y>2.318</Y><Z>0</Z></Point>
+					   <Point><X>4</X><Y>2.318</Y><Z>0</Z></Point>
+					   <Point><X>0.8</X><Y>1.545</Y><Z>0</Z></Point>
+					   <Point><X>3.2</X><Y>3.091</Y><Z>0</Z></Point>
+					   <Point><X>3.2</X><Y>0</Y><Z>0</Z></Point>
+					   <Point><X>3.2</X><Y>-2.318</Y><Z>0</Z></Point>
+					   <Point><X>0</X><Y>-2.318</Y><Z>0</Z></Point>
 					</Points>
 					<Closed>true</Closed>
 				</Curve>
@@ -22445,12 +22279,6 @@ traceln("Im leaving");]]></Action>
 		<VersionMajor>8</VersionMajor>
 		<VersionMinor>0</VersionMinor>
 		<VersionBuild>5</VersionBuild>
-    </RequiredLibraryReference>
-    <RequiredLibraryReference>
-		<LibraryName><![CDATA[new_0529]]></LibraryName>
-		<VersionMajor>0</VersionMajor>
-		<VersionMinor>0</VersionMinor>
-		<VersionBuild>0</VersionBuild>
     </RequiredLibraryReference>
 </Model>
 </AnyLogicWorkspace>
